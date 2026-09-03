@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { X, Check, ArrowUpRight, ShieldCheck, Sparkles, AlertCircle } from "lucide-react";
+import { X, Check, ArrowUpRight, ShieldCheck, Sparkles, AlertCircle, Link as LinkIcon } from "lucide-react";
 
 interface WhitelistModalProps {
   isOpen: boolean;
@@ -11,6 +11,7 @@ interface WhitelistModalProps {
 export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps) {
   const [xHandle, setXHandle] = useState("");
   const [walletAddress, setWalletAddress] = useState("");
+  const [postLink, setPostLink] = useState("");
   const [hasInteracted, setHasInteracted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isConfirmed, setIsConfirmed] = useState(false);
@@ -27,6 +28,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
           const parsed = JSON.parse(saved);
           setXHandle(parsed.xHandle || "");
           setWalletAddress(parsed.wallet || "");
+          setPostLink(parsed.postLink || "");
           setHasInteracted(true);
           setIsConfirmed(true);
         } catch {
@@ -49,12 +51,13 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg("");
 
     const cleanHandle = xHandle.trim();
     const cleanWallet = walletAddress.trim();
+    const cleanPostLink = postLink.trim();
 
     if (!cleanHandle) {
       setErrorMsg("Please provide your X user handle.");
@@ -76,11 +79,34 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
       return;
     }
 
+    if (!cleanPostLink) {
+      setErrorMsg("Please paste the link to your quote tweet or comment.");
+      return;
+    }
+
+    if (!cleanPostLink.includes("x.com") && !cleanPostLink.includes("twitter.com") && !cleanPostLink.includes("http")) {
+      setErrorMsg("Please provide a valid link from X / Twitter.");
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Simulate verification delay
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const res = await fetch("/api/whitelist", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          xHandle: cleanHandle.startsWith("@") ? cleanHandle : `@${cleanHandle}`,
+          walletAddress: cleanWallet,
+          postLink: cleanPostLink,
+        }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Failed to submit checkpoint registration.");
+      }
+
       setIsConfirmed(true);
       if (typeof window !== "undefined") {
         localStorage.setItem(
@@ -88,11 +114,16 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
           JSON.stringify({
             xHandle: cleanHandle.startsWith("@") ? cleanHandle : `@${cleanHandle}`,
             wallet: cleanWallet,
+            postLink: cleanPostLink,
             timestamp: new Date().toISOString(),
           })
         );
       }
-    }, 900);
+    } catch (err: any) {
+      setErrorMsg(err.message || "Failed to register checkpoint. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleShareOnX = () => {
@@ -127,7 +158,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
               EARLY SUPPORTER CHECKPOINT
             </h2>
             <p className="mt-2 text-xs sm:text-sm text-zinc-400 font-sans font-light leading-relaxed">
-              Connect your X and drop your Ethereum wallet to confirm your checkpoint.
+              Connect your X, drop your Ethereum wallet, and provide proof of interaction to confirm your checkpoint.
             </p>
           </div>
 
@@ -158,7 +189,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
               </h3>
 
               <p className="mt-2 text-xs sm:text-sm text-zinc-400 max-w-md font-sans">
-                Your credentials have been securely registered for Generation 01 Genesis allocation.
+                Your credentials and wallet address have been saved directly to the Genesis whitelist registry for Generation 01.
               </p>
 
               {/* Registered Details Card */}
@@ -171,6 +202,20 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
                   <span className="text-zinc-500">EVM WALLET:</span>
                   <span className="text-cyan-300 truncate max-w-[200px]">{walletAddress}</span>
                 </div>
+                {postLink && (
+                  <div className="flex items-center justify-between">
+                    <span className="text-zinc-500">POST PROOF:</span>
+                    <a
+                      href={postLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-purple-400 hover:text-purple-300 underline truncate max-w-[200px] inline-flex items-center gap-1"
+                    >
+                      <span>View Submission</span>
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  </div>
+                )}
                 <div className="flex items-center justify-between pt-1 border-t border-white/5 text-[11px]">
                   <span className="text-zinc-500">STATUS:</span>
                   <span className="text-emerald-400 font-semibold">ALLOCATION PENDING</span>
@@ -197,7 +242,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
               </div>
             </div>
           ) : (
-            /* Form View matching the user's screenshot */
+            /* Form View */
             <form onSubmit={handleSubmit} className="space-y-6">
               
               {/* Error Message */}
@@ -220,7 +265,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
                       Connect X &amp; Provide Wallet
                     </h3>
                     <p className="text-xs text-zinc-400 font-sans font-light mt-0.5">
-                      Authorize your X handle to start your checkpoint verification.
+                      Enter your X handle and EVM address to register your identity.
                     </p>
                   </div>
 
@@ -277,7 +322,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
                       Like, Repost &amp; Tag 3 Friends
                     </h3>
                     <p className="text-xs text-zinc-400 font-sans font-light mt-0.5">
-                      Join the AIBORN community by showing support on X and tagging 3 friends.
+                      Support on X, tag 3 friends, and paste the link to your quote or comment.
                     </p>
                   </div>
 
@@ -303,6 +348,25 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
                       </a>
                     </span>
                   </label>
+
+                  {/* Quote / Comment Link Input */}
+                  <div>
+                    <label className="block text-[11px] font-mono-code text-zinc-400 mb-1 flex items-center gap-1.5">
+                      <LinkIcon className="w-3 h-3 text-purple-400" />
+                      <span>Quote / Comment Proof Link</span>
+                    </label>
+                    <input
+                      type="url"
+                      placeholder="https://x.com/your_handle/status/..."
+                      value={postLink}
+                      onChange={(e) => setPostLink(e.target.value)}
+                      className="w-full px-3.5 py-2.5 rounded-lg bg-black/60 border border-white/10 focus:border-purple-500 focus:outline-none text-xs font-mono-code text-white placeholder:text-zinc-600 transition-colors"
+                      required
+                    />
+                    <p className="text-[10px] font-mono-code text-zinc-500 mt-1">
+                      Paste the URL of your quote tweet or reply tagging 3 friends.
+                    </p>
+                  </div>
                 </div>
               </div>
 
@@ -311,9 +375,9 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-xl font-mono-code text-xs sm:text-sm font-bold tracking-widest text-white uppercase bg-purple-600 hover:bg-purple-500 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(147,51,234,0.35)] transition-all duration-300 transform hover:-translate-y-0.5"
+                  className="w-full py-4 rounded-xl font-mono-code text-xs sm:text-sm font-bold tracking-widest text-white uppercase bg-purple-600 hover:bg-purple-500 disabled:opacity-50 disabled:cursor-not-allowed shadow-[0_0_30px_rgba(147,51,234,0.35)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
                 >
-                  {isSubmitting ? "VERIFYING CHECKPOINT..." : "CONFIRM MY CHECKPOINT"}
+                  {isSubmitting ? "VERIFYING & RECORDING CHECKPOINT..." : "CONFIRM MY CHECKPOINT"}
                 </button>
               </div>
 
