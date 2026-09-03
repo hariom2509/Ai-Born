@@ -5,9 +5,11 @@ import Link from "next/link";
 import StatusBadge from "./StatusBadge";
 import CountdownTimer from "./CountdownTimer";
 import { ArrowRight, Terminal, Sparkles, ChevronRight, ShieldCheck } from "lucide-react";
+import { useWhitelistModal } from "./WhitelistContext";
 
 export default function HeroSection() {
   const [terminalStep, setTerminalStep] = useState(0);
+  const { openWhitelistModal } = useWhitelistModal();
   const xUrl = process.env.NEXT_PUBLIC_X_URL || "https://x.com/BornAI__";
 
   // Typewriter step progression for AI identity generation
@@ -79,22 +81,31 @@ export default function HeroSection() {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+              <button
+                type="button"
+                onClick={openWhitelistModal}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-mono-code text-sm font-bold tracking-wider text-white bg-purple-600 hover:bg-purple-500 shadow-[0_0_30px_rgba(147,51,234,0.45)] transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer"
+              >
+                <Sparkles className="w-4 h-4 text-purple-200" />
+                <span>APPLY FOR WHITELIST</span>
+              </button>
+
               <Link
                 href="#genesis"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl font-mono-code text-sm font-semibold tracking-wider text-white bg-purple-600 hover:bg-purple-500 shadow-[0_0_30px_rgba(147,51,234,0.4)] transition-all duration-300 transform hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-mono-code text-sm font-semibold tracking-wider text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-purple-500/40 transition-all duration-300"
               >
                 <span>EXPLORE GENESIS</span>
-                <ChevronRight className="w-4 h-4 text-white/80" />
+                <ChevronRight className="w-4 h-4 text-zinc-400" />
               </Link>
 
               <a
                 href={xUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-mono-code text-sm text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-purple-500/40 transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-mono-code text-sm text-zinc-400 hover:text-white bg-transparent hover:bg-white/[0.04] border border-transparent hover:border-white/10 transition-all duration-300"
               >
-                <span>FOLLOW THE BUILD</span>
-                <ArrowRight className="w-4 h-4 text-zinc-400 group-hover:translate-x-0.5 transition-transform" />
+                <span>FOLLOW @BornAI__</span>
+                <ArrowRight className="w-4 h-4 text-zinc-500 group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
 

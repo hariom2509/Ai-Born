@@ -3,12 +3,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import StatusBadge from "./StatusBadge";
-import { ArrowUpRight, Menu, X, Cpu, Activity } from "lucide-react";
+import { ArrowUpRight, Menu, X, Cpu, Activity, Sparkles } from "lucide-react";
+import { useWhitelistModal } from "./WhitelistContext";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cycleCount, setCycleCount] = useState(24800);
+  const { openWhitelistModal } = useWhitelistModal();
 
   const xUrl = process.env.NEXT_PUBLIC_X_URL || "https://x.com/BornAI__";
 
@@ -119,7 +121,16 @@ export default function Navbar() {
 
             {/* Right side CTAs */}
             <div className="hidden sm:flex items-center gap-3">
-              <div className="px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/10 text-[10px] font-mono-code text-cyan-300 flex items-center gap-1.5">
+              <button
+                type="button"
+                onClick={openWhitelistModal}
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono-code font-semibold tracking-wider text-white bg-purple-600 hover:bg-purple-500 shadow-[0_0_20px_rgba(147,51,234,0.35)] transition-all duration-200 cursor-pointer transform hover:-translate-y-0.5"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-purple-200" />
+                <span>APPLY FOR WHITELIST</span>
+              </button>
+
+              <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/10 text-[10px] font-mono-code text-cyan-300">
                 <Activity className="w-3 h-3 text-cyan-400 animate-pulse" />
                 <span>NEURAL SYNC: 99.8%</span>
               </div>
@@ -128,7 +139,7 @@ export default function Navbar() {
                 href={xUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono-code bg-white/5 hover:bg-white/10 text-zinc-200 hover:text-white border border-white/10 hover:border-purple-500/40 transition-all duration-200"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono-code bg-white/5 hover:bg-white/10 text-zinc-200 hover:text-white border border-white/10 hover:border-purple-500/40 transition-all duration-200"
               >
                 <span>Follow on X</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
@@ -137,7 +148,13 @@ export default function Navbar() {
 
             {/* Mobile menu hamburger button */}
             <div className="flex items-center gap-2.5 sm:hidden">
-              <StatusBadge label="BETA" variant="beta" />
+              <button
+                type="button"
+                onClick={openWhitelistModal}
+                className="px-2.5 py-1 rounded-lg bg-purple-600 text-[10px] font-mono-code font-semibold text-white shadow-[0_0_15px_rgba(147,51,234,0.4)]"
+              >
+                WHITELIST
+              </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 rounded-lg bg-white/5 border border-white/10 text-zinc-300 hover:text-white focus:outline-none"
@@ -158,6 +175,18 @@ export default function Navbar() {
       {mobileMenuOpen && (
         <div className="sm:hidden bg-[#07070d]/98 backdrop-blur-2xl border-b border-white/10 px-6 py-6 transition-all">
           <nav className="flex flex-col gap-4">
+            <button
+              type="button"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                openWhitelistModal();
+              }}
+              className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-purple-600 text-white font-mono-code text-xs font-bold tracking-wider shadow-[0_0_20px_rgba(147,51,234,0.4)]"
+            >
+              <Sparkles className="w-4 h-4 text-purple-200" />
+              <span>APPLY FOR WHITELIST</span>
+            </button>
+
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -168,7 +197,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-3">
+            <div className="pt-2">
               <a
                 href={xUrl}
                 target="_blank"

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import AiNeuralConstellation from "@/components/AiNeuralConstellation";
+import { WhitelistProvider } from "@/components/WhitelistContext";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -101,11 +102,13 @@ export default function RootLayout({
           <AiNeuralConstellation />
         </div>
 
-        {/* Global sticky minimal navbar with AI Telemetry */}
-        <Navbar />
+        <WhitelistProvider>
+          {/* Global sticky minimal navbar with AI Telemetry */}
+          <Navbar />
 
-        {/* Main page content */}
-        <div className="relative z-10">{children}</div>
+          {/* Main page content */}
+          <div className="relative z-10">{children}</div>
+        </WhitelistProvider>
       </body>
     </html>
   );
