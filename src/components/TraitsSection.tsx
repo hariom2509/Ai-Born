@@ -1,7 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import { Compass, Zap, Activity, Box, Sparkles, Award, Code2, ChevronRight, X, ExternalLink, Maximize2 } from "lucide-react";
+import { Compass, Zap, Activity, Box, Sparkles, Award, Code2, ChevronRight, X, ExternalLink, Maximize2, Lock } from "lucide-react";
+
+// PRE-REVEAL FLAG: Set to true once mint is complete to unblur all visual identities
+const IS_POST_MINT_REVEALED = false;
 
 interface OriginArchetype {
   id: string;
@@ -398,7 +401,7 @@ export default function TraitsSection() {
               </h3>
               <p className="mt-2 text-zinc-400 text-sm sm:text-base max-w-2xl font-light">
                 Every Genesis identity descends from one of six foundational Python agent classes. 
-                Select an archetype below to inspect its neural architecture, tools, and visual identity.
+                Visual identities are cryptographically locked until Genesis mint reveal.
               </p>
             </div>
 
@@ -431,31 +434,56 @@ export default function TraitsSection() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               
-              {/* Left: High-Res Poster Showcase Card */}
+              {/* Left: Pre-Reveal Blurred Poster Showcase Card */}
               <div className="lg:col-span-5 flex flex-col items-center">
                 <div 
-                  className="relative group cursor-pointer w-full max-w-[340px] rounded-xl overflow-hidden border border-white/15 shadow-2xl transition-transform duration-300 hover:scale-[1.02]"
+                  className="relative group cursor-pointer w-full max-w-[340px] rounded-xl overflow-hidden border border-purple-500/30 bg-black shadow-2xl transition-transform duration-300 hover:scale-[1.02]"
                   onClick={() => setLightboxImage(selectedOrigin.image)}
                 >
+                  {/* Poster Image with Pre-Reveal Blur */}
                   <img
                     src={selectedOrigin.image}
                     alt={`AIBORN Origin Archetype ${selectedOrigin.num} ${selectedOrigin.name}`}
-                    className="w-full h-auto object-cover rounded-xl"
+                    className={`w-full h-auto object-cover rounded-xl transition-all duration-700 ${
+                      IS_POST_MINT_REVEALED ? "" : "blur-2xl scale-115 filter select-none pointer-events-none opacity-80"
+                    }`}
                   />
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2 text-white">
-                    <Maximize2 className="w-8 h-8 text-white drop-shadow-md" />
-                    <span className="text-xs font-mono-code tracking-widest uppercase bg-black/80 px-3 py-1 rounded-full border border-white/20">
-                      CLICK TO ENLARGE POSTER
+
+                  {/* Encrypted Pre-Reveal Overlay */}
+                  {!IS_POST_MINT_REVEALED && (
+                    <div className="absolute inset-0 bg-black/45 backdrop-blur-[2px] flex flex-col items-center justify-center p-6 text-center">
+                      <div className="w-14 h-14 rounded-full bg-black/80 border border-purple-400/40 flex items-center justify-center mb-3 shadow-[0_0_25px_rgba(168,85,247,0.35)]">
+                        <Lock className="w-6 h-6 text-purple-300 animate-pulse" />
+                      </div>
+                      <span className="px-3 py-1 rounded-full text-[10px] font-mono-code font-bold tracking-widest uppercase bg-purple-950/80 border border-purple-500/40 text-purple-200">
+                        PRE-REVEAL ENCRYPTION
+                      </span>
+                      <span className="text-xs font-mono-code text-zinc-300 mt-2 font-medium">
+                        IDENTITY LOCKED UNTIL MINT
+                      </span>
+                      <span className="text-[10px] font-mono-code text-zinc-400 mt-1">
+                        CLICK TO INSPECT ENCRYPTED KEY
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Top Status Bar */}
+                  <div className="absolute top-3 left-3 right-3 flex items-center justify-between px-3 py-1.5 rounded-lg bg-black/80 backdrop-blur-md border border-white/10 text-[10px] font-mono-code text-zinc-300">
+                    <span>{selectedOrigin.num} / {selectedOrigin.name}</span>
+                    <span className="text-amber-400 flex items-center gap-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping" />
+                      CLASSIFIED
                     </span>
                   </div>
+
+                  {/* Bottom Spec Bar */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-1.5 rounded-lg bg-black/80 backdrop-blur-md border border-white/10 text-[10px] font-mono-code text-zinc-300">
-                    <span>{selectedOrigin.num} / {selectedOrigin.name}</span>
-                    <span className={selectedOrigin.accent.text}>POSTER SPEC</span>
+                    <span>STATUS: UNREVEALED</span>
+                    <span className={selectedOrigin.accent.text}>5,000 GENESIS KEYS</span>
                   </div>
                 </div>
                 <div className="mt-3 text-center text-[11px] font-mono-code text-zinc-500">
-                  OFFICIAL GENESIS ARTWORK / CLICK POSTER TO VIEW IN FULL RESOLUTION
+                  PRE-REVEAL ENCRYPTION ACTIVE / VISUAL ARCHETYPE UNLOCKS POST-MINT
                 </div>
               </div>
 
@@ -574,22 +602,45 @@ export default function TraitsSection() {
       {/* Lightbox Modal for Poster Inspection */}
       {lightboxImage && (
         <div 
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg flex items-center justify-center p-4 animate-in fade-in duration-200"
           onClick={() => setLightboxImage(null)}
         >
-          <div className="relative max-w-2xl w-full max-h-[90vh] flex flex-col items-center">
+          <div className="relative max-w-md w-full max-h-[90vh] flex flex-col items-center">
             <button
               onClick={() => setLightboxImage(null)}
               className="absolute -top-12 right-0 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
             >
               <X className="w-6 h-6" />
             </button>
-            <img
-              src={lightboxImage}
-              alt="High resolution AIBORN Origin Poster"
-              className="w-auto h-auto max-h-[85vh] object-contain rounded-xl border border-white/20 shadow-2xl"
-              onClick={(e) => e.stopPropagation()}
-            />
+            <div className="relative w-full rounded-2xl overflow-hidden border border-purple-500/40 bg-black shadow-2xl">
+              <img
+                src={lightboxImage}
+                alt="Classified Pre-Reveal AIBORN Origin Poster"
+                className={`w-full h-auto max-h-[75vh] object-contain rounded-2xl transition-all duration-700 ${
+                  IS_POST_MINT_REVEALED ? "" : "blur-2xl scale-110 filter select-none pointer-events-none opacity-80"
+                }`}
+                onClick={(e) => e.stopPropagation()}
+              />
+              {!IS_POST_MINT_REVEALED && (
+                <div 
+                  className="absolute inset-0 bg-black/50 backdrop-blur-[2px] flex flex-col items-center justify-center p-6 text-center select-none"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="w-16 h-16 rounded-full bg-black/80 border border-purple-400/50 flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(168,85,247,0.4)]">
+                    <Lock className="w-7 h-7 text-purple-300 animate-pulse" />
+                  </div>
+                  <span className="px-4 py-1.5 rounded-full text-xs font-mono-code font-bold tracking-widest uppercase bg-purple-950/80 border border-purple-500/40 text-purple-200">
+                    PRE-REVEAL ENCRYPTION / CLASSIFIED
+                  </span>
+                  <p className="text-sm font-mono-code text-zinc-300 max-w-xs mt-3">
+                    Full visual identity unlocks post-mint for the 5,000 Genesis holders.
+                  </p>
+                  <span className="text-xs font-mono-code text-purple-400/80 mt-4 border-t border-white/10 pt-3">
+                    NETWORK: ARC / ENGINE: PYTHON 3.12
+                  </span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
