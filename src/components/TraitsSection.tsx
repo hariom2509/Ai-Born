@@ -194,6 +194,40 @@ creativity.run()
 >>> Refining...
 >>> Creating...`,
   },
+  {
+    id: "observation",
+    num: "06",
+    name: "OBSERVATION",
+    subtitle: "[ Watch | Understand | Anticipate ]",
+    className: "Observation(Agent)",
+    purpose: "watch",
+    coreLabel: "core",
+    coreOrLogic: "understand",
+    tools: ["Monitor()", "Analyze()", "Predict()"],
+    flow: ["Monitor", "Analyze", "Predict", "Alert"],
+    quote: "See beyond the present. More signals. Clearer patterns. Brighter tomorrow.",
+    image: "/origins/06-observation.jpg",
+    accent: {
+      text: "text-amber-400",
+      border: "border-amber-500/40",
+      bg: "bg-amber-500/10",
+      badgeBg: "bg-amber-500/20 text-amber-300",
+      glow: "shadow-[0_0_25px_rgba(245,158,11,0.25)]",
+    },
+    pythonCode: `class Observation(Agent):
+    def __init__(self):
+        self.purpose = "watch"
+        self.core = "understand"
+        self.tools = [Monitor(), Analyze(), Predict()]
+
+# see beyond the present
+observer = Observation()
+observer.run()
+>>> Watching...
+>>> Understanding...
+>>> Anticipating...
+>>> A higher tomorrow...`,
+  },
 ];
 
 export default function TraitsSection() {
@@ -205,8 +239,8 @@ export default function TraitsSection() {
       number: "01",
       name: "ORIGIN",
       tag: "FOUNDATIONAL SIGNATURE",
-      desc: "The agent's origin signature. Establishes foundational lineage and runtime behavior from five archetypes.",
-      examples: ["Origin", "Harmony", "Execution", "Resilience", "Creativity"],
+      desc: "The agent's origin signature. Establishes foundational lineage and runtime behavior from six archetypes.",
+      examples: ["Origin", "Harmony", "Execution", "Resilience", "Creativity", "Observation"],
       icon: Compass,
       borderGlow: "group-hover:border-purple-500/50",
       accentColor: "text-purple-400",
@@ -350,7 +384,7 @@ export default function TraitsSection() {
         </div>
 
         {/* ------------------------------------------------------------- */}
-        {/* NEW DEDICATED SHOWCASE: THE 5 OFFICIAL ORIGIN ARCHETYPES */}
+        {/* DEDICATED SHOWCASE: THE 6 OFFICIAL ORIGIN ARCHETYPES */}
         {/* ------------------------------------------------------------- */}
         <div className="mt-20 pt-16 border-t border-white/10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
@@ -360,10 +394,10 @@ export default function TraitsSection() {
                 // TRAIT 01 DEEP DIVE
               </div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
-                THE 5 ORIGIN ARCHETYPES
+                THE 6 ORIGIN ARCHETYPES
               </h3>
               <p className="mt-2 text-zinc-400 text-sm sm:text-base max-w-2xl font-light">
-                Every Genesis identity descends from one of five foundational Python agent classes. 
+                Every Genesis identity descends from one of six foundational Python agent classes. 
                 Select an archetype below to inspect its neural architecture, tools, and visual identity.
               </p>
             </div>
@@ -505,7 +539,7 @@ export default function TraitsSection() {
                 {/* Bottom archetypes mini-row to quickly switch */}
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                   <div className="text-[11px] font-mono-code text-zinc-400">
-                    ALL 5 ARCHETYPES PROGRAMMED DETERMINISTICALLY FOR ARC GENESIS
+                    ALL 6 ARCHETYPES PROGRAMMED DETERMINISTICALLY FOR ARC GENESIS
                   </div>
                   <div className="flex gap-2">
                     {ORIGIN_ARCHETYPES.map((o) => (

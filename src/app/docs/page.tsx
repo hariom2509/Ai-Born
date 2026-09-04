@@ -230,7 +230,7 @@ export default function DocsPage() {
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
                 <h3 className="font-display font-bold text-white text-base">01 // ORIGIN</h3>
                 <p className="text-sm text-zinc-400 mt-1">The origin signature of the agent. Establishes foundational identity.</p>
-                <div className="text-xs font-mono-code text-purple-300 mt-2">5 Official Archetypes: 01 Origin, 02 Harmony, 03 Execution, 04 Resilience, 05 Creativity</div>
+                <div className="text-xs font-mono-code text-purple-300 mt-2">6 Official Archetypes: 01 Origin, 02 Harmony, 03 Execution, 04 Resilience, 05 Creativity, 06 Observation</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
