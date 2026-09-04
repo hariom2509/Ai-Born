@@ -24,9 +24,9 @@ export default function HeroSection() {
     { text: "initializing AIBORN kernel v0.9.4...", color: "text-zinc-500" },
     { text: "> scanning agent identity space...", color: "text-purple-400" },
     { text: "> compiling origin traits [ORIGIN: 01_ORIGIN]...", color: "text-cyan-400" },
-    { text: "> binding neural core: NEURAL_ALPHA // 0x42f9b8...", color: "text-purple-300" },
+    { text: "> binding neural core: NEURAL_ALPHA / 0x42f9b8...", color: "text-purple-300" },
     { text: "> assembling personality matrix: [STRATEGIST / ANALYTICAL]...", color: "text-blue-300" },
-    { text: "> AI CORE: ONLINE // VERIFYING ONCHAIN IDENTITY...", color: "text-emerald-400" },
+    { text: "> AI CORE: ONLINE / VERIFYING ONCHAIN IDENTITY...", color: "text-emerald-400" },
     { text: "> IDENTITY INITIALIZED: AIBORN_0421 [GENESIS ACCESS KEY]", color: "text-white font-semibold" },
   ];
 
@@ -42,7 +42,7 @@ export default function HeroSection() {
             <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/10 mb-6 backdrop-blur-md">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping" />
               <span className="text-xs font-mono-code text-zinc-300 tracking-wider">
-                AIBORN // EXPERIMENTAL BUILD
+                AIBORN / EXPERIMENTAL BUILD
               </span>
               <span className="text-zinc-600">|</span>
               <span className="text-[11px] font-mono-code text-purple-400">
@@ -114,7 +114,7 @@ export default function HeroSection() {
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono-code text-xs">
                 <div>
                   <div className="text-zinc-500 text-[10px] uppercase">SYSTEM</div>
-                  <div className="text-white font-medium mt-0.5">AIBORN // v0.9</div>
+                  <div className="text-white font-medium mt-0.5">AIBORN / v0.9</div>
                 </div>
                 <div>
                   <div className="text-zinc-500 text-[10px] uppercase">STATUS</div>
@@ -199,7 +199,7 @@ export default function HeroSection() {
 
                 {/* Subdued HUD coordinate markers */}
                 <div className="absolute top-2 left-2 font-mono-code text-[9px] text-zinc-600">
-                  LAT: 44.92 // LON: 93.26
+                  LAT: 44.92 / LON: 93.26
                 </div>
                 <div className="absolute bottom-2 right-2 font-mono-code text-[9px] text-zinc-600">
                   HASH: 0x8f2a...c014

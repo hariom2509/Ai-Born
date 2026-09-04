@@ -55,7 +55,7 @@ export default function AgentSection() {
         {/* Section Header */}
         <div className="max-w-3xl">
           <div className="text-xs font-mono-code text-purple-400 uppercase tracking-widest mb-3">
-            // INTENDED EXPERIENCE
+            / INTENDED EXPERIENCE
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
             YOUR AGENT. YOUR IDENTITY.

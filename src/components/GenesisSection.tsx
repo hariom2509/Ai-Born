@@ -15,7 +15,7 @@ export default function GenesisSection() {
           {/* Left: Content */}
           <div className="lg:col-span-6">
             <div className="text-xs font-mono-code text-purple-400 uppercase tracking-widest mb-3">
-              // GENERATION 01
+              / GENERATION 01
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
               5,000 GENESIS AGENTS
@@ -58,7 +58,7 @@ export default function GenesisSection() {
                 </div>
 
                 <div className="mt-6 max-w-sm text-xs text-zinc-400 font-mono-code leading-relaxed">
-                  PROGRAMMATIC COMBINATION // DETERMINISTIC PYTHON ENGINE // VERIFIABLE METADATA
+                  PROGRAMMATIC COMBINATION / DETERMINISTIC PYTHON ENGINE / VERIFIABLE METADATA
                 </div>
 
                 {/* 3 Pillars */}

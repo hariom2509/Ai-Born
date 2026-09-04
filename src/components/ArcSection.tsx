@@ -12,7 +12,7 @@ export default function ArcSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl">
           <div className="text-xs font-mono-code text-cyan-400 uppercase tracking-widest mb-3">
-            // ONCHAIN INFRASTRUCTURE
+            / ONCHAIN INFRASTRUCTURE
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">

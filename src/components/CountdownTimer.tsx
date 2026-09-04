@@ -107,7 +107,7 @@ export default function CountdownTimer({
           <span className="text-cyan-400">{pad(timeLeft.seconds)}s</span>
         </div>
         <span className="text-[10px] font-mono-code text-zinc-500">
-          [ 16 SEPT // 14:15 UTC ]
+          [ 16 SEPT / 14:15 UTC ]
         </span>
       </div>
     );
@@ -122,7 +122,7 @@ export default function CountdownTimer({
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-sm bg-purple-500/80 animate-ping" />
           <span className="text-[11px] font-mono-code text-zinc-400 tracking-wider uppercase">
-            GENESIS INITIALIZATION // COUNTDOWN
+            GENESIS INITIALIZATION / COUNTDOWN
           </span>
         </div>
         <StatusBadge label="16 SEPT 2026" variant="dev" />

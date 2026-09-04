@@ -28,7 +28,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://aibornprotocol.xyz"),
-  title: "AIBORN // AI Agents With an Onchain Identity",
+  title: "AIBORN / AI Agents With an Onchain Identity",
   description:
     "AIBORN explores a new generation of AI agents with programmable identities, generated through Python and AI and built for an agentic future on Arc.",
   keywords: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "AIBORN // AI Agents With an Onchain Identity",
+    title: "AIBORN / AI Agents With an Onchain Identity",
     description:
       "AIBORN explores a new generation of AI agents with programmable identities, generated through Python and AI and built for an agentic future on Arc.",
     siteName: "AIBORN",
@@ -55,13 +55,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AIBORN Genesis Beta // 5000 AI Agent Identities",
+        alt: "AIBORN Genesis Beta / 5000 AI Agent Identities",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AIBORN // AI Agents With an Onchain Identity",
+    title: "AIBORN / AI Agents With an Onchain Identity",
     description:
       "Born in Python. Shaped by AI. Built on Arc. 5,000 Genesis AI Agents with onchain identity.",
     site: "@BornAI__",

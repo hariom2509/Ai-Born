@@ -27,7 +27,7 @@ export default function AiTelemetryBar() {
               SYNTHETIC AI RUNTIME
             </span>
           </div>
-          <span className="text-zinc-600 hidden sm:inline">//</span>
+          <span className="text-zinc-600 hidden sm:inline">/</span>
           <span className="text-zinc-400 hidden sm:inline">
             CORE: AIBORN_KERNEL_v0.9.4
           </span>

@@ -47,7 +47,7 @@ export default function TheIdeaSection() {
         {/* Section Header */}
         <div className="max-w-3xl">
           <div className="text-xs font-mono-code text-purple-400 uppercase tracking-widest mb-3">
-            // ARCHITECTURE & VISION
+            / ARCHITECTURE & VISION
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
             THE IDEA
@@ -72,7 +72,7 @@ export default function TheIdeaSection() {
         <div className="mt-16 sm:mt-20">
           <div className="p-6 sm:p-10 rounded-2xl hud-card hud-corners">
             <div className="text-xs font-mono-code text-zinc-400 uppercase tracking-widest mb-8 text-center">
-              SYSTEM TOPOLOGY // FROM IDENTIFIER TO AUTONOMY
+              SYSTEM TOPOLOGY / FROM IDENTIFIER TO AUTONOMY
             </div>
 
             {/* Desktop horizontal flow / Mobile vertical flow */}
@@ -118,7 +118,7 @@ export default function TheIdeaSection() {
 
             {/* Bottom summary statement */}
             <div className="mt-10 pt-6 border-t border-white/5 text-center font-mono-code text-xs text-zinc-400">
-              PERSISTENT OWNERSHIP // PORTABLE INTELLIGENCE // ONCHAIN VERIFIABLE
+              PERSISTENT OWNERSHIP / PORTABLE INTELLIGENCE / ONCHAIN VERIFIABLE
             </div>
           </div>
         </div>

@@ -181,7 +181,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
               </div>
 
               <span className="text-xs font-mono-code text-emerald-400 tracking-wider uppercase font-semibold">
-                CHECKPOINT CONFIRMED // RECORDED
+                CHECKPOINT CONFIRMED / RECORDED
               </span>
 
               <h3 className="mt-2 font-display font-bold text-2xl text-white">
@@ -387,7 +387,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
 
         {/* Modal Footer Note */}
         <div className="px-6 sm:px-8 py-3 bg-black/60 border-t border-white/5 text-[10px] font-mono-code text-zinc-500 flex items-center justify-between">
-          <span>AIBORN // GENESIS ALLOCATION</span>
+          <span>AIBORN / GENESIS ALLOCATION</span>
           <span>5000 AGENT SLOTS</span>
         </div>
 

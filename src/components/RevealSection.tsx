@@ -13,7 +13,7 @@ export default function RevealSection() {
           {/* Left Column: Explanation */}
           <div className="lg:col-span-6">
             <div className="text-xs font-mono-code text-purple-400 uppercase tracking-widest mb-3">
-              // POST-MINT DISCOVERY
+              / POST-MINT DISCOVERY
             </div>
             
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">

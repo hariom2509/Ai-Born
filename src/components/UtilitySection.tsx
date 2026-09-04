@@ -49,7 +49,7 @@ export default function UtilitySection() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div>
             <div className="text-xs font-mono-code text-purple-400 uppercase tracking-widest mb-3">
-              // UTILITY & ACCESS ARCHITECTURE
+              / UTILITY & ACCESS ARCHITECTURE
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
               THE NFT IS THE BEGINNING.
@@ -113,7 +113,7 @@ export default function UtilitySection() {
           </div>
 
           <div className="mt-8 pt-4 border-t border-white/5 text-center text-xs font-mono-code text-zinc-400">
-            OWNERSHIP CREDENTIAL // ZERO CENTRALIZED PASSWORDS // VERIFIABLE ONCHAIN ACCESS
+            OWNERSHIP CREDENTIAL / ZERO CENTRALIZED PASSWORDS / VERIFIABLE ONCHAIN ACCESS
           </div>
         </div>
 

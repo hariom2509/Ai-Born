@@ -304,7 +304,7 @@ export default function TraitsSection() {
         {/* Section Header */}
         <div className="max-w-3xl">
           <div className="text-xs font-mono-code text-purple-400 uppercase tracking-widest mb-3">
-            // PROGRAMMABLE TAXONOMY
+            / PROGRAMMABLE TAXONOMY
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
             THE TRAIT SYSTEM
@@ -328,7 +328,7 @@ export default function TraitsSection() {
                   {/* Top Bar with Number and Tag */}
                   <div className="flex items-center justify-between pb-3 border-b border-white/5">
                     <span className="font-mono-code text-xs text-zinc-400">
-                      TRAIT // {trait.number}
+                      TRAIT / {trait.number}
                     </span>
                     <span className="font-mono-code text-[10px] text-purple-400/80 tracking-wider">
                       {trait.tag}
@@ -391,7 +391,7 @@ export default function TraitsSection() {
             <div>
               <div className="text-xs font-mono-code text-cyan-400 uppercase tracking-widest mb-2 flex items-center gap-2">
                 <Code2 className="w-4 h-4" />
-                // TRAIT 01 DEEP DIVE
+                / TRAIT 01 DEEP DIVE
               </div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
                 THE 6 ORIGIN ARCHETYPES
@@ -450,12 +450,12 @@ export default function TraitsSection() {
                     </span>
                   </div>
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-1.5 rounded-lg bg-black/80 backdrop-blur-md border border-white/10 text-[10px] font-mono-code text-zinc-300">
-                    <span>{selectedOrigin.num} // {selectedOrigin.name}</span>
+                    <span>{selectedOrigin.num} / {selectedOrigin.name}</span>
                     <span className={selectedOrigin.accent.text}>POSTER SPEC</span>
                   </div>
                 </div>
                 <div className="mt-3 text-center text-[11px] font-mono-code text-zinc-500">
-                  OFFICIAL GENESIS ARTWORK // CLICK POSTER TO VIEW IN FULL RESOLUTION
+                  OFFICIAL GENESIS ARTWORK / CLICK POSTER TO VIEW IN FULL RESOLUTION
                 </div>
               </div>
 
@@ -528,7 +528,7 @@ export default function TraitsSection() {
                 {/* Python Agent Code Block */}
                 <div>
                   <div className="flex items-center justify-between text-[11px] font-mono-code text-zinc-400 mb-1.5">
-                    <span>KERNEL SIGNATURE // PYTHON 3.12</span>
+                    <span>KERNEL SIGNATURE / PYTHON 3.12</span>
                     <span className={selectedOrigin.accent.text}>REPRODUCIBLE RUNTIME</span>
                   </div>
                   <pre className="p-4 rounded-xl bg-black/80 border border-white/10 text-xs sm:text-[13px] font-mono-code text-zinc-300 overflow-x-auto leading-relaxed">

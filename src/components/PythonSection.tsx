@@ -11,7 +11,7 @@ export default function PythonSection() {
           {/* Left: Copy */}
           <div className="lg:col-span-6">
             <div className="text-xs font-mono-code text-purple-400 uppercase tracking-widest mb-3">
-              // PROGRAMMATIC ORIGINS
+              / PROGRAMMATIC ORIGINS
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white tracking-tight">
@@ -54,7 +54,7 @@ export default function PythonSection() {
                   <span>generator_core.py</span>
                 </div>
                 <div className="text-[10px] text-zinc-400 tracking-wider">
-                  PYTHON 3.12 // AIBORN_SYSTEM
+                  PYTHON 3.12 / AIBORN_SYSTEM
                 </div>
               </div>
 
@@ -77,7 +77,7 @@ export default function PythonSection() {
               </pre>
 
               <div className="mt-4 flex items-center justify-between text-[11px] font-mono-code text-zinc-400 pt-3 border-t border-white/5">
-                <span>// ARCHITECTURAL CONCEPT</span>
+                <span>/ ARCHITECTURAL CONCEPT</span>
                 <span className="text-purple-400">REPRODUCIBLE &amp; SCALABLE</span>
               </div>
 

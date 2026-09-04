@@ -5,7 +5,7 @@ import { ArrowLeft, BookOpen, ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AIBORN Genesis Documentation // AI Agents With an Onchain Identity",
+  title: "AIBORN Genesis Documentation / AI Agents With an Onchain Identity",
   description:
     "Official Genesis technical document: 5,000 Genesis AI Agents, programmable trait taxonomy, Python engine, and Arc ecosystem roadmap.",
 };
@@ -44,13 +44,13 @@ export default function DocsPage() {
         {/* Document Header */}
         <header className="mb-14">
           <div className="text-xs font-mono-code text-purple-400 uppercase tracking-widest mb-3">
-            TECHNICAL SPECIFICATION // GENESIS WHITEPAPER
+            TECHNICAL SPECIFICATION / GENESIS WHITEPAPER
           </div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-extrabold text-white tracking-tight">
             AIBORN
           </h1>
           <h2 className="mt-3 text-xl sm:text-2xl font-display font-medium text-purple-200/90">
-            Genesis // AI Agents With an Onchain Identity
+            Genesis / AI Agents With an Onchain Identity
           </h2>
           <p className="mt-4 text-base sm:text-lg text-zinc-300 font-sans">
             Born in Python. Shaped by AI. Built for an agentic future on Arc.
@@ -74,7 +74,7 @@ export default function DocsPage() {
           {/* 01 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              01 // What is AIBORN?
+              01 / What is AIBORN?
             </h2>
             <p>AIBORN is an experimental project exploring a simple question:</p>
             <blockquote className="p-4 rounded-xl bg-purple-950/20 border-l-4 border-purple-500 text-purple-200 font-medium my-4">
@@ -101,13 +101,13 @@ export default function DocsPage() {
           {/* 02 */}
           <section className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              02 // The Core Concept
+              02 / The Core Concept
             </h2>
             <p>AIBORN has three fundamental layers.</p>
 
             <div className="space-y-3 p-5 rounded-xl bg-white/[0.02] border border-white/5">
               <h3 className="text-lg font-display font-bold text-white">
-                Layer 1 // Identity
+                Layer 1 / Identity
               </h3>
               <p>The Genesis NFT represents a unique AIBORN identity.</p>
               <p>Each NFT has:</p>
@@ -126,7 +126,7 @@ export default function DocsPage() {
 
             <div className="space-y-3 p-5 rounded-xl bg-white/[0.02] border border-white/5">
               <h3 className="text-lg font-display font-bold text-white">
-                Layer 2 // Intelligence
+                Layer 2 / Intelligence
               </h3>
               <p>The NFT is connected to an AI agent experience.</p>
               <p>The corresponding agent can eventually have:</p>
@@ -146,7 +146,7 @@ export default function DocsPage() {
 
             <div className="space-y-3 p-5 rounded-xl bg-white/[0.02] border border-white/5">
               <h3 className="text-lg font-display font-bold text-white">
-                Layer 3 // Application
+                Layer 3 / Application
               </h3>
               <p>A dedicated AIBORN application is being developed.</p>
               <p>Genesis holders will be among the first users of the application.</p>
@@ -164,7 +164,7 @@ export default function DocsPage() {
           {/* 03 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              03 // Why an NFT?
+              03 / Why an NFT?
             </h2>
             <p>The NFT provides a simple, public and portable ownership layer.</p>
             <p>
@@ -192,7 +192,7 @@ export default function DocsPage() {
           {/* 04 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              04 // Genesis Collection
+              04 / Genesis Collection
             </h2>
             <p>The first AIBORN collection will contain:</p>
             <div className="text-3xl sm:text-4xl font-display font-extrabold text-white py-2">
@@ -222,43 +222,43 @@ export default function DocsPage() {
           {/* 05 */}
           <section className="space-y-6">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              05 // The Trait System
+              05 / The Trait System
             </h2>
             <p>AIBORN Genesis will use six primary trait categories.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">01 // ORIGIN</h3>
+                <h3 className="font-display font-bold text-white text-base">01 / ORIGIN</h3>
                 <p className="text-sm text-zinc-400 mt-1">The origin signature of the agent. Establishes foundational identity.</p>
                 <div className="text-xs font-mono-code text-purple-300 mt-2">6 Official Archetypes: 01 Origin, 02 Harmony, 03 Execution, 04 Resilience, 05 Creativity, 06 Observation</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">02 // CORE</h3>
+                <h3 className="font-display font-bold text-white text-base">02 / CORE</h3>
                 <p className="text-sm text-zinc-400 mt-1">The central AI identity. Visual and conceptual center of computation.</p>
                 <div className="text-xs font-mono-code text-cyan-300 mt-2">Different Core types have distinct rarity distributions.</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">03 // PERSONALITY</h3>
+                <h3 className="font-display font-bold text-white text-base">03 / PERSONALITY</h3>
                 <p className="text-sm text-zinc-400 mt-1">Determines behavioral identity and problem solving mannerisms.</p>
                 <div className="text-xs font-mono-code text-indigo-300 mt-2">Examples: Explorer, Builder, Strategist, Creator, Observer</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">04 // FRAME</h3>
+                <h3 className="font-display font-bold text-white text-base">04 / FRAME</h3>
                 <p className="text-sm text-zinc-400 mt-1">Structural visual identity surrounding the agent across classes.</p>
                 <div className="text-xs font-mono-code text-pink-300 mt-2">Defines silhouette while keeping individuals unique.</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">05 // ENERGY</h3>
+                <h3 className="font-display font-bold text-white text-base">05 / ENERGY</h3>
                 <p className="text-sm text-zinc-400 mt-1">Dynamic visual signature: motion, particles, pulses, light patterns.</p>
                 <div className="text-xs font-mono-code text-amber-300 mt-2">Moves collection beyond static artwork.</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">06 // CLASS</h3>
+                <h3 className="font-display font-bold text-white text-base">06 / CLASS</h3>
                 <p className="text-sm text-zinc-400 mt-1">Overall rarity tier determined by trait distribution.</p>
                 <div className="text-xs font-mono-code text-emerald-300 mt-2">Common, Uncommon, Rare, Epic, Legendary</div>
               </div>
@@ -270,7 +270,7 @@ export default function DocsPage() {
           {/* 06 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              06 // Animated NFTs
+              06 / Animated NFTs
             </h2>
             <p>AIBORN Genesis identities are designed to be animated.</p>
             <p>The final NFT can be represented as a GIF or another supported animated format.</p>
@@ -291,7 +291,7 @@ export default function DocsPage() {
           {/* 07 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              07 // AI Generated Identity
+              07 / AI Generated Identity
             </h2>
             <p>AI is part of the creation process.</p>
             <p>AIBORN combines programmatic generation with AI assisted identity creation.</p>
@@ -314,7 +314,7 @@ export default function DocsPage() {
           {/* 08 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              08 // Generated With Python
+              08 / Generated With Python
             </h2>
             <p>Python is part of AIBORN&apos;s technical identity.</p>
             <p>The generation system can define:</p>
@@ -351,7 +351,7 @@ mint`}
           {/* 09 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              09 // The Reveal
+              09 / The Reveal
             </h2>
             <p>AIBORN Genesis will use a delayed reveal experience.</p>
             <p>At mint, the collector receives their Genesis NFT.</p>
@@ -376,11 +376,11 @@ mint`}
           {/* 10 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              10 // What Happens After Reveal?
+              10 / What Happens After Reveal?
             </h2>
             <p>Once revealed, each Genesis NFT becomes a recognizable AIBORN identity.</p>
             <div className="p-5 rounded-xl bg-black/60 border border-purple-500/30 font-mono-code text-xs space-y-1">
-              <div className="text-white font-bold text-sm">AIBORN #0421 // NOVA</div>
+              <div className="text-white font-bold text-sm">AIBORN #0421 / NOVA</div>
               <div className="text-zinc-400">Origin: 01 Origin [Logic | Structure | Infinite]</div>
               <div className="text-zinc-400">Core: Rare</div>
               <div className="text-zinc-400">Personality: Explorer</div>
@@ -397,7 +397,7 @@ mint`}
           {/* 11 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              11 // The AIBORN Application
+              11 / The AIBORN Application
             </h2>
             <p>The most important utility of Genesis is access to the future AIBORN application.</p>
             <p className="text-amber-300 font-mono-code text-sm">The application is currently in development.</p>
@@ -433,7 +433,7 @@ AI AGENT
           {/* 12 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              12 // Agent Memory
+              12 / Agent Memory
             </h2>
             <p>One of the longer term goals is to give AIBORN agents persistent memory.</p>
             <p>The agent can potentially remember information that the user explicitly chooses to preserve.</p>
@@ -453,7 +453,7 @@ AI AGENT
           {/* 13 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              13 // Agent Personality
+              13 / Agent Personality
             </h2>
             <p>Personality can eventually become more than a metadata field.</p>
             <p>
@@ -473,7 +473,7 @@ AI AGENT
           {/* 14 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              14 // Future Agent Capabilities
+              14 / Future Agent Capabilities
             </h2>
             <p>AIBORN is exploring the possibility of allowing agents to interact with approved tools and services.</p>
             <p>Potential future capabilities include:</p>
@@ -498,7 +498,7 @@ AI AGENT
           {/* 15 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              15 // Why Arc?
+              15 / Why Arc?
             </h2>
             <p>AIBORN is being developed with Arc in mind.</p>
             <p>Arc provides an environment for exploring stablecoin based applications and agentic economic activity.</p>
@@ -518,7 +518,7 @@ AI AGENT
           {/* 16 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              16 // Genesis Holder Utility
+              16 / Genesis Holder Utility
             </h2>
             <p>Genesis holders are intended to receive the earliest access to the AIBORN ecosystem.</p>
             <div className="space-y-2 text-sm">
@@ -536,7 +536,7 @@ AI AGENT
           {/* 17 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              17 // Why 5,000?
+              17 / Why 5,000?
             </h2>
             <p>
               Genesis is intended to be large enough to create a community while remaining limited enough for each identity to remain meaningful.
@@ -556,7 +556,7 @@ AI AGENT
           {/* 18 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              18 // Security &amp; Ownership
+              18 / Security &amp; Ownership
             </h2>
             <p>AIBORN is designed around wallet based ownership.</p>
             <p>The application should not rely only on a username or email to determine Genesis access.</p>
@@ -576,7 +576,7 @@ AI AGENT
           {/* 19 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              19 // Development Status
+              19 / Development Status
             </h2>
             <p>AIBORN is currently in an <strong className="text-emerald-300">experimental / beta phase</strong>.</p>
             <p>The public website represents the project before the full application is released.</p>
@@ -597,31 +597,31 @@ AI AGENT
           {/* 20 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              20 // Roadmap
+              20 / Roadmap
             </h2>
             <div className="space-y-4 font-mono-code text-xs">
               <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5">
-                <div className="text-purple-300 font-bold">PHASE 01 // ORIGIN</div>
+                <div className="text-purple-300 font-bold">PHASE 01 / ORIGIN</div>
                 <div className="text-zinc-400 mt-1">AIBORN introduction. Technical concept. Community formation. Genesis campaign.</div>
               </div>
               <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5">
-                <div className="text-purple-300 font-bold">PHASE 02 // GENESIS</div>
+                <div className="text-purple-300 font-bold">PHASE 02 / GENESIS</div>
                 <div className="text-zinc-400 mt-1">5,000 Genesis identities. Programmable traits. Rarity system. Animated artwork. Mint.</div>
               </div>
               <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5">
-                <div className="text-purple-300 font-bold">PHASE 03 // REVEAL</div>
+                <div className="text-purple-300 font-bold">PHASE 03 / REVEAL</div>
                 <div className="text-zinc-400 mt-1">Genesis identities become visible. Traits are revealed. Agent identities are established.</div>
               </div>
               <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5">
-                <div className="text-purple-300 font-bold">PHASE 04 // APPLICATION</div>
+                <div className="text-purple-300 font-bold">PHASE 04 / APPLICATION</div>
                 <div className="text-zinc-400 mt-1">AIBORN application opens to Genesis holders. Wallet based authentication. NFT ownership verification. Agent access.</div>
               </div>
               <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5">
-                <div className="text-purple-300 font-bold">PHASE 05 // AGENTS</div>
+                <div className="text-purple-300 font-bold">PHASE 05 / AGENTS</div>
                 <div className="text-zinc-400 mt-1">Agent interaction. Personality. Memory. Context. Approved tools.</div>
               </div>
               <div className="p-3 rounded-lg bg-white/[0.02] border border-white/5">
-                <div className="text-purple-300 font-bold">PHASE 06 // ONCHAIN AGENTS</div>
+                <div className="text-purple-300 font-bold">PHASE 06 / ONCHAIN AGENTS</div>
                 <div className="text-zinc-400 mt-1">Explore controlled interactions between AI agents and onchain infrastructure. Depends on technical development, security validation and ecosystem readiness.</div>
               </div>
             </div>
@@ -632,7 +632,7 @@ AI AGENT
           {/* 21 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              21 // The Long Term Vision
+              21 / The Long Term Vision
             </h2>
             <p>AIBORN starts with NFTs. But NFTs are not the destination.</p>
             <p>The long term idea is:</p>
@@ -655,7 +655,7 @@ AI AGENT
           {/* 22 */}
           <section className="space-y-4 pb-12">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              22 // Genesis Is The Beginning
+              22 / Genesis Is The Beginning
             </h2>
             <p>5,000 identities will form the first AIBORN generation.</p>
             <p>Each one begins as a collection of traits.</p>

@@ -48,7 +48,7 @@ export default function Navbar() {
             <span className="text-emerald-300 font-semibold tracking-wider">
               SYNTHETIC AI RUNTIME
             </span>
-            <span className="text-zinc-600">//</span>
+            <span className="text-zinc-600">/</span>
             <span className="text-zinc-400 hidden sm:inline">
               KERNEL: AIBORN_v0.9.4
             </span>

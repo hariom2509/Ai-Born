@@ -17,7 +17,7 @@ export default function EarlyBuildSection() {
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 mb-8 backdrop-blur-md">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           <span className="text-xs font-mono-code text-zinc-300 tracking-widest uppercase">
-            AIBORN // SYSTEM STATUS: EXPERIMENTAL BETA
+            AIBORN / SYSTEM STATUS: EXPERIMENTAL BETA
           </span>
         </div>
 
