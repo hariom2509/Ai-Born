@@ -230,7 +230,7 @@ export default function DocsPage() {
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
                 <h3 className="font-display font-bold text-white text-base">01 // ORIGIN</h3>
                 <p className="text-sm text-zinc-400 mt-1">The origin signature of the agent. Establishes foundational identity.</p>
-                <div className="text-xs font-mono-code text-purple-300 mt-2">Examples: Core, Experimental, Synthetic, Autonomous, Unknown</div>
+                <div className="text-xs font-mono-code text-purple-300 mt-2">5 Official Archetypes: 01 Origin, 02 Harmony, 03 Execution, 04 Resilience, 05 Creativity</div>
               </div>
 
               <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
@@ -381,7 +381,7 @@ mint`}
             <p>Once revealed, each Genesis NFT becomes a recognizable AIBORN identity.</p>
             <div className="p-5 rounded-xl bg-black/60 border border-purple-500/30 font-mono-code text-xs space-y-1">
               <div className="text-white font-bold text-sm">AIBORN #0421 // NOVA</div>
-              <div className="text-zinc-400">Origin: Synthetic</div>
+              <div className="text-zinc-400">Origin: 01 Origin [Logic | Structure | Infinite]</div>
               <div className="text-zinc-400">Core: Rare</div>
               <div className="text-zinc-400">Personality: Explorer</div>
               <div className="text-zinc-400">Frame: Quantum</div>

@@ -23,7 +23,7 @@ export default function HeroSection() {
   const terminalLines = [
     { text: "initializing AIBORN kernel v0.9.4...", color: "text-zinc-500" },
     { text: "> scanning agent identity space...", color: "text-purple-400" },
-    { text: "> compiling synthetic traits [ORIGIN: SYNTHETIC_01]...", color: "text-cyan-400" },
+    { text: "> compiling origin traits [ORIGIN: 01_ORIGIN]...", color: "text-cyan-400" },
     { text: "> binding neural core: NEURAL_ALPHA // 0x42f9b8...", color: "text-purple-300" },
     { text: "> assembling personality matrix: [STRATEGIST / ANALYTICAL]...", color: "text-blue-300" },
     { text: "> AI CORE: ONLINE // VERIFYING ONCHAIN IDENTITY...", color: "text-emerald-400" },

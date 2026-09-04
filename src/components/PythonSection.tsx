@@ -66,7 +66,7 @@ export default function PythonSection() {
                   generator = IdentityGenerator(seed=<span className="text-amber-300">&quot;ARC_GENESIS_5000&quot;</span>){"\n\n"}
                   <span className="text-zinc-500"># Synthesize agent profile with neural traits</span>{"\n"}
                   agent = generator.create_identity(id=<span className="text-amber-300">421</span>){"\n\n"}
-                  <span className="text-purple-400">print</span>(agent.origin)       <span className="text-zinc-500"># &rarr; &quot;SYNTHETIC_01&quot;</span>{"\n"}
+                  <span className="text-purple-400">print</span>(agent.origin)       <span className="text-zinc-500"># &rarr; &quot;01_ORIGIN&quot;</span>{"\n"}
                   <span className="text-purple-400">print</span>(agent.core)         <span className="text-zinc-500"># &rarr; &quot;NEURAL_ALPHA&quot;</span>{"\n"}
                   <span className="text-purple-400">print</span>(agent.personality)  <span className="text-zinc-500"># &rarr; &quot;STRATEGIST&quot;</span>{"\n"}
                   <span className="text-purple-400">print</span>(agent.energy)       <span className="text-zinc-500"># &rarr; &quot;VIOLET_PULSE&quot;</span>{"\n"}

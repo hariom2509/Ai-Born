@@ -122,7 +122,7 @@ export default function RevealSection() {
                 <div className="grid grid-cols-3 gap-2 text-[11px] font-mono-code">
                   <div className="p-2 rounded bg-white/[0.02] border border-white/5">
                     <div className="text-zinc-400 text-[9px]">ORIGIN</div>
-                    <div className="text-zinc-300 truncate">SYNTHETIC</div>
+                    <div className="text-zinc-300 truncate">01_ORIGIN</div>
                   </div>
                   <div className="p-2 rounded bg-white/[0.02] border border-white/5">
                     <div className="text-zinc-400 text-[9px]">CORE</div>
