@@ -239,43 +239,43 @@ export default function DocsPage() {
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
               05 / The Trait System
             </h2>
-            <p>AIBORN Genesis will use six primary trait categories.</p>
+            <p>AIBORN Genesis will use six primary trait archetypes.</p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-cyan-500/20">
                 <h3 className="font-display font-bold text-white text-base">01 / ORIGIN</h3>
-                <p className="text-sm text-zinc-400 mt-1">The origin signature of the agent. Establishes foundational identity.</p>
-                <div className="text-xs font-mono-code text-purple-300 mt-2">6 Official Archetypes: 01 Origin, 02 Harmony, 03 Execution, 04 Resilience, 05 Creativity, 06 Observation</div>
+                <p className="text-sm text-zinc-400 mt-1">Foundational reasoning signature. Establishes deep comprehension, structural thinking, and infinite logic.</p>
+                <div className="text-xs font-mono-code text-cyan-300 mt-2">Class: Origin(Agent) | Tools: Think(), Observe() | Logic: Infinite</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">02 / CORE</h3>
-                <p className="text-sm text-zinc-400 mt-1">The central AI identity. Visual and conceptual center of computation.</p>
-                <div className="text-xs font-mono-code text-cyan-300 mt-2">Different Core types have distinct rarity distributions.</div>
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-amber-400/20">
+                <h3 className="font-display font-bold text-white text-base">02 / HARMONY</h3>
+                <p className="text-sm text-zinc-400 mt-1">Equilibrium, balance, and collaborative alignment across multi-agent consensus and data streams.</p>
+                <div className="text-xs font-mono-code text-amber-300 mt-2">Class: Harmony(Agent) | Tools: Collaborate(), Reflect() | Core: Balance</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">03 / PERSONALITY</h3>
-                <p className="text-sm text-zinc-400 mt-1">Determines behavioral identity and problem solving mannerisms.</p>
-                <div className="text-xs font-mono-code text-indigo-300 mt-2">Examples: Explorer, Builder, Strategist, Creator, Observer</div>
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-orange-500/20">
+                <h3 className="font-display font-bold text-white text-base">03 / EXECUTION</h3>
+                <p className="text-sm text-zinc-400 mt-1">High-velocity deterministic execution. Translates ideas into autonomous operations and validated onchain impact.</p>
+                <div className="text-xs font-mono-code text-orange-400 mt-2">Class: Execution(Agent) | Tools: Plan(), Execute(), Validate() | Core: Precision</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">04 / FRAME</h3>
-                <p className="text-sm text-zinc-400 mt-1">Structural visual identity surrounding the agent across classes.</p>
-                <div className="text-xs font-mono-code text-pink-300 mt-2">Defines silhouette while keeping individuals unique.</div>
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-blue-500/20">
+                <h3 className="font-display font-bold text-white text-base">04 / RESILIENCE</h3>
+                <p className="text-sm text-zinc-400 mt-1">Fault-tolerant neural persistence. Converts runtime errors, latency, and volatility into adaptive strength.</p>
+                <div className="text-xs font-mono-code text-blue-400 mt-2">Class: Resilience(Agent) | Tools: Recover(), Retry() | Core: Adapt</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">05 / ENERGY</h3>
-                <p className="text-sm text-zinc-400 mt-1">Dynamic visual signature: motion, particles, pulses, light patterns.</p>
-                <div className="text-xs font-mono-code text-amber-300 mt-2">Moves collection beyond static artwork.</div>
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-purple-500/20">
+                <h3 className="font-display font-bold text-white text-base">05 / CREATIVITY</h3>
+                <p className="text-sm text-zinc-400 mt-1">Generative latent space exploration. Synthesizes novel solutions, expressive architectures, and emergent paradigms.</p>
+                <div className="text-xs font-mono-code text-purple-300 mt-2">Class: Creativity(Agent) | Tools: Generate(), Refine(), Visualize() | Core: Create</div>
               </div>
 
-              <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                <h3 className="font-display font-bold text-white text-base">06 / CLASS</h3>
-                <p className="text-sm text-zinc-400 mt-1">Overall rarity tier determined by trait distribution.</p>
-                <div className="text-xs font-mono-code text-emerald-300 mt-2">Common, Uncommon, Rare, Epic, Legendary</div>
+              <div className="p-4 rounded-xl bg-white/[0.02] border border-amber-500/20">
+                <h3 className="font-display font-bold text-white text-base">06 / OBSERVATION</h3>
+                <p className="text-sm text-zinc-400 mt-1">Continuous environmental awareness and predictive intelligence. Analyzes multi-vector telemetry and telemetry signals.</p>
+                <div className="text-xs font-mono-code text-amber-400 mt-2">Class: Observation(Agent) | Tools: Monitor(), Analyze(), Predict() | Core: Understand</div>
               </div>
             </div>
           </section>
@@ -290,12 +290,14 @@ export default function DocsPage() {
             <p>AIBORN Genesis identities are designed to be animated.</p>
             <p>The final NFT can be represented as a GIF or another supported animated format.</p>
             <p>The animation is not intended to be random movement added to a static image.</p>
-            <p>Instead, individual layers can contribute to the identity:</p>
+            <p>Instead, individual archetype dynamics contribute to the identity:</p>
             <div className="p-4 rounded-xl bg-black/60 border border-white/8 font-mono-code text-xs space-y-1 text-purple-200">
-              <div>Core &rarr; pulses</div>
-              <div>Energy &rarr; moves</div>
-              <div>Frame &rarr; reacts</div>
-              <div>Particles &rarr; evolves</div>
+              <div>Origin &rarr; reasons &amp; shapes reality</div>
+              <div>Harmony &rarr; balances &amp; evolves alignment</div>
+              <div>Execution &rarr; plans &amp; drives impact</div>
+              <div>Resilience &rarr; adapts &amp; overcomes chaos</div>
+              <div>Creativity &rarr; imagines &amp; synthesizes new worlds</div>
+              <div>Observation &rarr; monitors &amp; anticipates signals</div>
             </div>
             <p>The result is a visual identity that feels active rather than static.</p>
             <p>The exact animation implementation will be finalized before Genesis mint.</p>
@@ -314,7 +316,7 @@ export default function DocsPage() {
             <p>AI can contribute to:</p>
             <ul className="list-disc list-inside space-y-1 text-sm text-zinc-400 font-mono-code">
               <li>Agent naming</li>
-              <li>Personality concepts</li>
+              <li>Archetype reasoning &amp; prompt synthesis</li>
               <li>Visual generation</li>
               <li>Identity characteristics</li>
               <li>Agent configuration</li>
@@ -335,12 +337,12 @@ export default function DocsPage() {
             <p>The generation system can define:</p>
             <pre className="p-4 rounded-xl bg-black/70 border border-white/10 font-mono-code text-xs text-zinc-300">
               {`Agent
- │  Origin
- │  Core
- │  Personality
- │  Frame
- │  Energy
- └  Class`}
+ │  01 / Origin
+ │  02 / Harmony
+ │  03 / Execution
+ │  04 / Resilience
+ │  05 / Creativity
+ └  06 / Observation`}
             </pre>
             <p>A generation engine can combine these components according to predefined rules.</p>
             <pre className="p-4 rounded-xl bg-black/70 border border-white/10 font-mono-code text-xs text-purple-300">
@@ -373,12 +375,11 @@ mint`}
             <p>The final combination of traits is initially hidden.</p>
             <p>The collector knows they have acquired a Genesis identity, but does not immediately know:</p>
             <ul className="list-disc list-inside space-y-1 text-sm text-zinc-400 font-mono-code">
-              <li>Their Core</li>
-              <li>Their Personality</li>
-              <li>Their Energy</li>
-              <li>Their Frame</li>
-              <li>Their Class</li>
-              <li>Their final rarity</li>
+              <li>Which of the 6 Trait Archetypes their agent embodies (01 Origin, 02 Harmony, 03 Execution, 04 Resilience, 05 Creativity, 06 Observation)</li>
+              <li>Their assigned Python Agent Class</li>
+              <li>Their active toolset and runtime capabilities</li>
+              <li>Their deterministic logic and prompt flow</li>
+              <li>Their final rarity tier</li>
             </ul>
             <p>After the reveal event, the metadata and visual identity become visible.</p>
             <p className="font-mono-code text-purple-300 text-sm">
@@ -396,12 +397,12 @@ mint`}
             <p>Once revealed, each Genesis NFT becomes a recognizable AIBORN identity.</p>
             <div className="p-5 rounded-xl bg-black/60 border border-purple-500/30 font-mono-code text-xs space-y-1">
               <div className="text-white font-bold text-sm">AIBORN #0421 / NOVA</div>
-              <div className="text-zinc-400">Origin: 01 Origin [Logic | Structure | Infinite]</div>
-              <div className="text-zinc-400">Core: Rare</div>
-              <div className="text-zinc-400">Personality: Explorer</div>
-              <div className="text-zinc-400">Frame: Quantum</div>
-              <div className="text-zinc-400">Energy: Pulse</div>
-              <div className="text-purple-300 font-bold">Class: Epic</div>
+              <div className="text-zinc-400">Trait Archetype: 01 Origin [Logic | Structure | Infinite]</div>
+              <div className="text-zinc-400">Class: Origin(Agent)</div>
+              <div className="text-zinc-400">Purpose: &quot;understand&quot;</div>
+              <div className="text-zinc-400">Logic: &quot;infinite&quot;</div>
+              <div className="text-zinc-400">Tools: [Think(), Observe()]</div>
+              <div className="text-purple-300 font-bold">Rarity Tier: Epic</div>
             </div>
             <p>The collector can then associate their identity with the corresponding AIBORN agent.</p>
             <p>The exact agent naming and attribute system will be finalized as development progresses.</p>
@@ -468,19 +469,19 @@ AI AGENT
           {/* 13 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              13 / Agent Personality
+              13 / Agent Archetype &amp; Behavior
             </h2>
-            <p>Personality can eventually become more than a metadata field.</p>
+            <p>Each of the six foundational trait archetypes defines the agent&apos;s core philosophy and operational posture.</p>
             <p>
-              An Explorer may be optimized for discovery and experimentation. A Builder may be more execution oriented. A Strategist may prioritize structured analysis.
+              Origin specializes in foundational logic and structural understanding. Harmony focuses on equilibrium and collaborative multi-agent consensus. Execution optimizes for deterministic velocity and impact. Resilience endures runtime failures and converts chaos into strength. Creativity synthesizes novel architectures in latent space. Observation provides deep environmental vigilance and anticipatory foresight.
             </p>
             <p>
               The objective is to make the trait system meaningful inside the future application:
             </p>
             <div className="p-3 rounded-lg bg-black/60 border border-white/10 font-mono-code text-xs text-purple-300">
-              NFT trait &rarr; Agent identity &rarr; Agent behavior
+              NFT Trait Archetype &rarr; Agent Identity &rarr; Agent Behavior &amp; Tool Execution
             </div>
-            <p>rather than treating traits as purely cosmetic.</p>
+            <p>rather than treating traits as purely cosmetic artwork layers.</p>
           </section>
 
           <hr className="border-white/5 my-8" />

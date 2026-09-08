@@ -241,62 +241,62 @@ export default function TraitsSection() {
     {
       number: "01",
       name: "ORIGIN",
-      tag: "FOUNDATIONAL SIGNATURE",
-      desc: "The agent's origin signature. Establishes foundational lineage and runtime behavior from six archetypes.",
-      examples: ["Origin", "Harmony", "Execution", "Resilience", "Creativity", "Observation"],
+      tag: "LOGIC / STRUCTURE",
+      desc: "The foundational reasoning signature. Establishes deep comprehension, structural thinking, and infinite logic.",
+      examples: ["Think()", "Observe()", "Infinite Logic", "Origin(Agent)"],
       icon: Compass,
-      borderGlow: "group-hover:border-purple-500/50",
-      accentColor: "text-purple-400",
-    },
-    {
-      number: "02",
-      name: "CORE",
-      tag: "CENTRAL INTELLIGENCE",
-      desc: "The defining AI core. Represents the conceptual and visual center of the agent's computation engine.",
-      examples: ["Neural Alpha", "Nexus Prime", "Quantum Mesh", "Void Engine", "Sovereign"],
-      icon: Zap,
       borderGlow: "group-hover:border-cyan-500/50",
       accentColor: "text-cyan-400",
     },
     {
-      number: "03",
-      name: "PERSONALITY",
-      tag: "BEHAVIORAL MATRIX",
-      desc: "How the agent behaves. Not merely cosmetic; directly influences how the AI agent communicates and solves problems.",
-      examples: ["Explorer", "Builder", "Strategist", "Creator", "Observer"],
+      number: "02",
+      name: "HARMONY",
+      tag: "BALANCE / EVOLUTION",
+      desc: "Equilibrium and collaborative alignment across multi-agent consensus, diverse models, and data flows.",
+      examples: ["Collaborate()", "Reflect()", "Balanced Core", "Harmony(Agent)"],
       icon: Activity,
-      borderGlow: "group-hover:border-indigo-500/50",
-      accentColor: "text-indigo-400",
+      borderGlow: "group-hover:border-amber-400/50",
+      accentColor: "text-amber-300",
+    },
+    {
+      number: "03",
+      name: "EXECUTION",
+      tag: "ACTION / IMPACT",
+      desc: "High-velocity deterministic execution. Translates ideas into autonomous operations and validated onchain impact.",
+      examples: ["Plan()", "Execute()", "Validate()", "Execution(Agent)"],
+      icon: Zap,
+      borderGlow: "group-hover:border-orange-500/50",
+      accentColor: "text-orange-400",
     },
     {
       number: "04",
-      name: "FRAME",
-      tag: "STRUCTURAL LAYER",
-      desc: "The structural visual layer surrounding the agent, defining architectural silhouette and chassis.",
-      examples: ["Carbon Mono", "Exo Lattice", "Quantum Void", "Hyper Ring", "Spectral"],
+      name: "RESILIENCE",
+      tag: "ADAPTATION / STRENGTH",
+      desc: "Fault-tolerant neural persistence. Converts runtime errors, latency, and volatility into adaptive strength.",
+      examples: ["Recover()", "Retry()", "Adaptive Core", "Resilience(Agent)"],
       icon: Box,
-      borderGlow: "group-hover:border-pink-500/50",
-      accentColor: "text-pink-400",
+      borderGlow: "group-hover:border-blue-500/50",
+      accentColor: "text-blue-400",
     },
     {
       number: "05",
-      name: "ENERGY",
-      tag: "DYNAMIC SIGNATURE",
-      desc: "The agent's visual energy signature. Expressed through animated particle emissions, light pulses, and motion.",
-      examples: ["Violet Pulse", "Cyan Plasma", "Solar Flare", "Dark Matter", "Zero Wave"],
+      name: "CREATIVITY",
+      tag: "IMAGINATION / SYNTHESIS",
+      desc: "Generative latent space exploration. Synthesizes novel solutions, expressive architectures, and emergent paradigms.",
+      examples: ["Generate()", "Refine()", "Visualize()", "Creativity(Agent)"],
       icon: Sparkles,
-      borderGlow: "group-hover:border-amber-500/50",
-      accentColor: "text-amber-400",
+      borderGlow: "group-hover:border-purple-500/50",
+      accentColor: "text-purple-300",
     },
     {
       number: "06",
-      name: "CLASS",
-      tag: "RARITY TIER",
-      desc: "The overall rarity tier calculated by the distribution and algorithmic rarity of combined traits.",
-      examples: ["Common", "Uncommon", "Rare", "Epic", "Legendary"],
+      name: "OBSERVATION",
+      tag: "VISION / PREDICTION",
+      desc: "Continuous environmental awareness and predictive intelligence. Analyzes multi-vector telemetry and telemetry signals.",
+      examples: ["Monitor()", "Analyze()", "Predict()", "Observation(Agent)"],
       icon: Award,
-      borderGlow: "group-hover:border-emerald-500/50",
-      accentColor: "text-emerald-400",
+      borderGlow: "group-hover:border-amber-500/50",
+      accentColor: "text-amber-400",
     },
   ];
 
@@ -313,8 +313,8 @@ export default function TraitsSection() {
             THE TRAIT SYSTEM
           </h2>
           <p className="mt-4 text-zinc-400 text-base sm:text-lg leading-relaxed font-light">
-            AIBORN Genesis uses six primary trait categories. Each trait contains multiple distinct variants, 
-            programmatically assembled into a singular, balanced agent identity.
+            AIBORN Genesis is defined by six primary trait archetypes. Each archetype embodies distinct reasoning logic, 
+            Python agent classes, runtime tools, and visual identities.
           </p>
         </div>
 
@@ -325,7 +325,15 @@ export default function TraitsSection() {
             return (
               <div
                 key={trait.name}
-                className={`group p-6 sm:p-7 rounded-xl hud-card hud-corners flex flex-col justify-between ${trait.borderGlow}`}
+                onClick={() => {
+                  const found = ORIGIN_ARCHETYPES.find((o) => o.name.toLowerCase() === trait.name.toLowerCase());
+                  if (found) {
+                    setSelectedOrigin(found);
+                    const el = document.getElementById("archetype-showcase");
+                    if (el) el.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className={`group p-6 sm:p-7 rounded-xl hud-card hud-corners flex flex-col justify-between cursor-pointer transition-all duration-300 hover:-translate-y-1 ${trait.borderGlow}`}
               >
                 <div>
                   {/* Top Bar with Number and Tag */}
@@ -339,13 +347,18 @@ export default function TraitsSection() {
                   </div>
 
                   {/* Trait Header */}
-                  <div className="mt-5 flex items-center gap-3">
-                    <div className={`p-2.5 rounded-lg bg-white/[0.03] border border-white/10 ${trait.accentColor} group-hover:scale-110 transition-transform`}>
-                      <IconComp className="w-5 h-5" />
+                  <div className="mt-5 flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className={`p-2.5 rounded-lg bg-white/[0.03] border border-white/10 ${trait.accentColor} group-hover:scale-110 transition-transform`}>
+                        <IconComp className="w-5 h-5" />
+                      </div>
+                      <h3 className="font-display font-bold text-xl text-white tracking-wide">
+                        {trait.name}
+                      </h3>
                     </div>
-                    <h3 className="font-display font-bold text-xl text-white tracking-wide">
-                      {trait.name}
-                    </h3>
+                    <span className={`text-[11px] font-mono-code ${trait.accentColor} opacity-70 group-hover:opacity-100 transition-opacity`}>
+                      INSPECT &rarr;
+                    </span>
                   </div>
 
                   {/* Description */}
@@ -357,23 +370,13 @@ export default function TraitsSection() {
                 {/* Trait Variants List */}
                 <div className="mt-6 pt-4 border-t border-white/5">
                   <div className="text-[10px] font-mono-code text-zinc-400 uppercase tracking-wider mb-2">
-                    VARIANT SAMPLES:
+                    ARCHETYPE CAPABILITIES:
                   </div>
                   <div className="flex flex-wrap gap-1.5">
                     {trait.examples.map((item) => (
                       <span
                         key={item}
-                        className={`px-2 py-0.5 rounded text-[11px] font-mono-code border transition-colors ${
-                          trait.name === "ORIGIN"
-                            ? "bg-purple-500/10 text-purple-200 border-purple-500/30 hover:border-purple-400 cursor-pointer"
-                            : "bg-white/[0.04] text-zinc-300 border-white/5"
-                        }`}
-                        onClick={() => {
-                          if (trait.name === "ORIGIN") {
-                            const found = ORIGIN_ARCHETYPES.find((o) => o.name.toLowerCase() === item.toLowerCase());
-                            if (found) setSelectedOrigin(found);
-                          }
-                        }}
+                        className="px-2 py-0.5 rounded text-[11px] font-mono-code border bg-white/[0.03] text-zinc-300 border-white/5 group-hover:border-white/20 transition-colors"
                       >
                         {item}
                       </span>
@@ -387,21 +390,21 @@ export default function TraitsSection() {
         </div>
 
         {/* ------------------------------------------------------------- */}
-        {/* DEDICATED SHOWCASE: THE 6 OFFICIAL ORIGIN ARCHETYPES */}
+        {/* DEDICATED SHOWCASE: THE 6 FOUNDATIONAL ARCHETYPES */}
         {/* ------------------------------------------------------------- */}
-        <div className="mt-20 pt-16 border-t border-white/10">
+        <div id="archetype-showcase" className="mt-20 pt-16 border-t border-white/10 scroll-mt-28">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
               <div className="text-xs font-mono-code text-cyan-400 uppercase tracking-widest mb-2 flex items-center gap-2">
                 <Code2 className="w-4 h-4" />
-                / TRAIT 01 DEEP DIVE
+                / ARCHETYPE DEEP DIVE
               </div>
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white tracking-tight">
-                THE 6 ORIGIN ARCHETYPES
+                THE 6 FOUNDATIONAL ARCHETYPES
               </h3>
               <p className="mt-2 text-zinc-400 text-sm sm:text-base max-w-2xl font-light">
-                Every Genesis identity descends from one of six foundational Python agent classes. 
-                Visual identities are cryptographically locked until Genesis mint reveal.
+                Every Genesis identity embodies one of six foundational Python agent traits. 
+                Visual identities are cryptographically locked with pre-reveal encryption until Genesis mint.
               </p>
             </div>
 

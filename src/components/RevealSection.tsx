@@ -126,16 +126,16 @@ export default function RevealSection() {
                 {/* Simulated Trait Grid (Obfuscated) */}
                 <div className="grid grid-cols-3 gap-2 text-[11px] font-mono-code">
                   <div className="p-2 rounded bg-white/[0.02] border border-white/5">
-                    <div className="text-zinc-400 text-[9px]">ORIGIN</div>
-                    <div className="text-zinc-300 truncate">01_ORIGIN</div>
+                    <div className="text-zinc-400 text-[9px]">TRAIT</div>
+                    <div className="text-cyan-300 truncate font-semibold">01_ORIGIN</div>
                   </div>
                   <div className="p-2 rounded bg-white/[0.02] border border-white/5">
-                    <div className="text-zinc-400 text-[9px]">CORE</div>
-                    <div className="text-zinc-300 truncate">NEURAL_ALPHA</div>
+                    <div className="text-zinc-400 text-[9px]">ARCHETYPE</div>
+                    <div className="text-zinc-300 truncate">Origin(Agent)</div>
                   </div>
                   <div className="p-2 rounded bg-white/[0.02] border border-white/5">
-                    <div className="text-zinc-400 text-[9px]">CLASS</div>
-                    <div className="text-purple-300 font-bold">RARE</div>
+                    <div className="text-zinc-400 text-[9px]">RARITY</div>
+                    <div className="text-purple-300 font-bold">EPIC</div>
                   </div>
                 </div>
 

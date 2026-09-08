@@ -31,7 +31,7 @@ export default function GenesisSection() {
                 Genesis is the first generation of AIBORN identities.
               </p>
               <p>
-                5,000 unique agents will be created through a programmable combination of traits, rarity, and AI-generated characteristics.
+                5,000 unique agents will be created through a programmable combination of 6 foundational trait archetypes, rarity, and AI-generated characteristics.
               </p>
               <p>
                 Once the Genesis collection is complete, new generations will be treated separately from Genesis. Genesis identities carry permanent origin provenance.
@@ -105,8 +105,8 @@ export default function GenesisSection() {
                   </div>
                   <div className="flex flex-col items-center">
                     <Layers className="w-5 h-5 text-cyan-400 mb-1.5" />
-                    <span className="text-[11px] font-mono-code text-white">6 TRAIT TIERS</span>
-                    <span className="text-[10px] text-zinc-400">Layered identity</span>
+                    <span className="text-[11px] font-mono-code text-white">6 TRAIT ARCHETYPES</span>
+                    <span className="text-[10px] text-zinc-400">Foundational traits</span>
                   </div>
                   <div className="flex flex-col items-center">
                     <Lock className="w-5 h-5 text-emerald-400 mb-1.5" />

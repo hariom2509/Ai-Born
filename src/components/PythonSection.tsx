@@ -66,11 +66,11 @@ export default function PythonSection() {
                   generator = IdentityGenerator(seed=<span className="text-amber-300">&quot;ARC_ROBINHOOD_GENESIS_5000&quot;</span>){"\n\n"}
                   <span className="text-zinc-500"># Synthesize agent profile with neural traits</span>{"\n"}
                   agent = generator.create_identity(id=<span className="text-amber-300">421</span>){"\n\n"}
-                  <span className="text-purple-400">print</span>(agent.origin)       <span className="text-zinc-500"># &rarr; &quot;01_ORIGIN&quot;</span>{"\n"}
-                  <span className="text-purple-400">print</span>(agent.core)         <span className="text-zinc-500"># &rarr; &quot;NEURAL_ALPHA&quot;</span>{"\n"}
-                  <span className="text-purple-400">print</span>(agent.personality)  <span className="text-zinc-500"># &rarr; &quot;STRATEGIST&quot;</span>{"\n"}
-                  <span className="text-purple-400">print</span>(agent.energy)       <span className="text-zinc-500"># &rarr; &quot;VIOLET_PULSE&quot;</span>{"\n"}
-                  <span className="text-purple-400">print</span>(agent.rarity_class) <span className="text-zinc-500"># &rarr; &quot;EPIC&quot;</span>{"\n\n"}
+                  <span className="text-purple-400">print</span>(agent.trait)         <span className="text-zinc-500"># &rarr; &quot;01_ORIGIN&quot;</span>{"\n"}
+                  <span className="text-purple-400">print</span>(agent.archetype)     <span className="text-zinc-500"># &rarr; &quot;LOGIC / STRUCTURE&quot;</span>{"\n"}
+                  <span className="text-purple-400">print</span>(agent.agent_class)   <span className="text-zinc-500"># &rarr; &quot;Origin(Agent)&quot;</span>{"\n"}
+                  <span className="text-purple-400">print</span>(agent.tools)         <span className="text-zinc-500"># &rarr; [&quot;Think()&quot;, &quot;Observe()&quot;]</span>{"\n"}
+                  <span className="text-purple-400">print</span>(agent.rarity_class)  <span className="text-zinc-500"># &rarr; &quot;EPIC&quot;</span>{"\n\n"}
                   <span className="text-zinc-500"># Compile reproducible cryptographic manifest</span>{"\n"}
                   metadata = agent.compile_onchain_manifest()
                 </code>

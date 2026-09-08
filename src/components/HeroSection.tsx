@@ -36,10 +36,10 @@ export default function HeroSection() {
   const terminalLines = [
     { text: "initializing AIBORN kernel v0.9.4...", color: "text-zinc-500" },
     { text: "> scanning agent identity space...", color: "text-purple-400" },
-    { text: "> compiling origin traits [ORIGIN: 01_ORIGIN]...", color: "text-cyan-400" },
-    { text: "> binding neural core: NEURAL_ALPHA / 0x42f9b8...", color: "text-purple-300" },
-    { text: "> assembling personality matrix: [STRATEGIST / ANALYTICAL]...", color: "text-blue-300" },
-    { text: "> AI CORE: ONLINE / VERIFYING ONCHAIN IDENTITY...", color: "text-emerald-400" },
+    { text: "> compiling agent trait: [TRAIT 01 / ORIGIN]...", color: "text-cyan-400" },
+    { text: "> binding agent archetype: [LOGIC / STRUCTURE]...", color: "text-purple-300" },
+    { text: "> mounting class runtime: [Origin(Agent) / Think(), Observe()]...", color: "text-blue-300" },
+    { text: "> IDENTITY RUNTIME: ONLINE / VERIFYING ONCHAIN CREDENTIAL...", color: "text-emerald-400" },
     { text: "> IDENTITY INITIALIZED: AIBORN_0421 [GENESIS ACCESS KEY]", color: "text-white font-semibold" },
   ];
 
