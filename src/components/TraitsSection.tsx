@@ -567,7 +567,7 @@ export default function TraitsSection() {
                 {/* Bottom archetypes mini-row to quickly switch */}
                 <div className="pt-4 border-t border-white/10 flex items-center justify-between">
                   <div className="text-[11px] font-mono-code text-zinc-400">
-                    ALL 6 ARCHETYPES PROGRAMMED DETERMINISTICALLY FOR ARC GENESIS
+                    ALL 6 ARCHETYPES PROGRAMMED DETERMINISTICALLY FOR ARC/ROBINHOOD GENESIS
                   </div>
                   <div className="flex gap-2">
                     {ORIGIN_ARCHETYPES.map((o) => (
@@ -636,7 +636,7 @@ export default function TraitsSection() {
                     Full visual identity unlocks post-mint for the 5,000 Genesis holders.
                   </p>
                   <span className="text-xs font-mono-code text-purple-400/80 mt-4 border-t border-white/10 pt-3">
-                    NETWORK: ARC / ENGINE: PYTHON 3.12
+                    NETWORK: ARC/ROBINHOOD / ENGINE: PYTHON 3.12
                   </span>
                 </div>
               )}

@@ -1,9 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import StatusBadge from "./StatusBadge";
-import { EyeOff, Sparkles, Shield, Cpu, Lock } from "lucide-react";
+import OpenSeaIcon from "./OpenSeaIcon";
+import { EyeOff, Sparkles, Shield, Cpu, Lock, ArrowUpRight } from "lucide-react";
 
 export default function RevealSection() {
+  const openseaUrl =
+    process.env.NEXT_PUBLIC_OPENSEA_URL ||
+    "https://opensea.io/collection/aiborn-genesis/overview";
+
   return (
     <section className="py-24 sm:py-32 border-t border-white/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +64,7 @@ export default function RevealSection() {
           </div>
 
           {/* Right Column: Concept Preview NFT Card */}
-          <div className="lg:col-span-6 flex justify-center">
+          <div className="lg:col-span-6 flex flex-col items-center">
             
             {/* The Demo Card */}
             <div className="w-full max-w-md rounded-2xl hud-card hud-corners p-4 sm:p-5 relative group">
@@ -139,6 +144,20 @@ export default function RevealSection() {
                 </div>
               </div>
 
+            </div>
+
+            {/* Link to OpenSea collection */}
+            <div className="mt-4">
+              <a
+                href={openseaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-mono-code text-zinc-400 hover:text-[#6cb2eb] transition-colors group"
+              >
+                <OpenSeaIcon className="w-3.5 h-3.5 text-[#2081E2]" />
+                <span>View Upcoming Genesis Collection on OpenSea</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-zinc-500 group-hover:text-[#6cb2eb] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
             </div>
 
           </div>

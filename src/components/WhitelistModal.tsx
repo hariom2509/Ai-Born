@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import OpenSeaIcon from "./OpenSeaIcon";
 import { X, Check, ArrowUpRight, ShieldCheck, Sparkles, AlertCircle, Link as LinkIcon } from "lucide-react";
 
 interface WhitelistModalProps {
@@ -18,6 +19,10 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
   const [errorMsg, setErrorMsg] = useState("");
 
   const pinnedPostUrl = "https://x.com/BornAI__/status/2095613724107452735";
+  const openseaUrl =
+    process.env.NEXT_PUBLIC_OPENSEA_URL ||
+    "https://opensea.io/collection/aiborn-genesis/overview";
+
 
   // Check localStorage for existing confirmation
   useEffect(() => {
@@ -128,7 +133,7 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
 
   const handleShareOnX = () => {
     const tweetText = encodeURIComponent(
-      `I just confirmed my Early Supporter Checkpoint for @BornAI__ Genesis!\n\n5,000 Genesis AI Agents with onchain identity built on Arc.\n\nApply for whitelist: https://aibornprotocol.xyz`
+      `I just confirmed my Early Supporter Checkpoint for @BornAI__ Genesis!\n\n5,000 Genesis AI Agents with onchain identity built on Arc/Robinhood.\n\nApply for whitelist: https://aibornprotocol.xyz`
     );
     window.open(`https://x.com/intent/tweet?text=${tweetText}`, "_blank");
   };
@@ -223,19 +228,31 @@ export default function WhitelistModal({ isOpen, onClose }: WhitelistModalProps)
               </div>
 
               {/* Action Buttons */}
-              <div className="mt-6 flex flex-col sm:flex-row gap-3 w-full">
-                <button
-                  type="button"
-                  onClick={handleShareOnX}
-                  className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-mono-code text-xs font-semibold tracking-wider transition-colors"
-                >
-                  <span>SHARE ON X</span>
-                  <ArrowUpRight className="w-4 h-4" />
-                </button>
+              <div className="mt-6 flex flex-col gap-3 w-full">
+                <div className="flex flex-col sm:flex-row gap-3 w-full">
+                  <button
+                    type="button"
+                    onClick={handleShareOnX}
+                    className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-mono-code text-xs font-semibold tracking-wider transition-colors"
+                  >
+                    <span>SHARE ON X</span>
+                    <ArrowUpRight className="w-4 h-4" />
+                  </button>
+                  <a
+                    href={openseaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#2081e2]/20 hover:bg-[#2081e2]/30 border border-[#2081e2]/40 text-[#93c5fd] hover:text-white font-mono-code text-xs font-semibold tracking-wider transition-colors group"
+                  >
+                    <OpenSeaIcon className="w-3.5 h-3.5 text-[#2081E2]" />
+                    <span>VIEW ON OPENSEA</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </a>
+                </div>
                 <button
                   type="button"
                   onClick={onClose}
-                  className="py-3 px-5 rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white border border-white/10 font-mono-code text-xs transition-colors"
+                  className="w-full py-2.5 px-5 rounded-xl bg-white/5 hover:bg-white/10 text-zinc-300 hover:text-white border border-white/10 font-mono-code text-xs transition-colors"
                 >
                   CLOSE
                 </button>

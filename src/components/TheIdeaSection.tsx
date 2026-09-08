@@ -34,7 +34,7 @@ export default function TheIdeaSection() {
     {
       title: "ONCHAIN",
       label: "STEP 05",
-      desc: "Agentic infrastructure built for the emerging Arc ecosystem.",
+      desc: "Agentic infrastructure built for the emerging Arc/Robinhood ecosystem.",
       icon: LinkIcon,
       accent: "border-emerald-500/40 text-emerald-300",
     },

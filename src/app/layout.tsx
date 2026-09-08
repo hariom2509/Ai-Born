@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://aibornprotocol.xyz"),
   title: "AIBORN / AI Agents With an Onchain Identity",
   description:
-    "AIBORN explores a new generation of AI agents with programmable identities, generated through Python and AI and built for an agentic future on Arc.",
+    "AIBORN explores a new generation of AI agents with programmable identities, generated through Python and AI and built for an agentic future on Arc/Robinhood.",
   keywords: [
     "AIBORN",
     "AI Agents",
     "Onchain AI",
     "Genesis",
-    "Arc Ecosystem",
+    "Arc/Robinhood Ecosystem",
     "Programmable Identity",
     "Python AI",
     "Autonomous Agents",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "AIBORN / AI Agents With an Onchain Identity",
     description:
-      "AIBORN explores a new generation of AI agents with programmable identities, generated through Python and AI and built for an agentic future on Arc.",
+      "AIBORN explores a new generation of AI agents with programmable identities, generated through Python and AI and built for an agentic future on Arc/Robinhood.",
     siteName: "AIBORN",
     images: [
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AIBORN / AI Agents With an Onchain Identity",
     description:
-      "Born in Python. Shaped by AI. Built on Arc. 5,000 Genesis AI Agents with onchain identity.",
+      "Born in Python. Shaped by AI. Built on Arc/Robinhood. 5,000 Genesis AI Agents with onchain identity.",
     site: "@BornAI__",
     creator: "@BornAI__",
     images: ["/og-image.png"],

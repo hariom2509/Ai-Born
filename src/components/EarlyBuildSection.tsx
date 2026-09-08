@@ -1,9 +1,13 @@
 import React from "react";
 import Link from "next/link";
+import OpenSeaIcon from "./OpenSeaIcon";
 import { ArrowRight, BookOpen, ArrowUpRight } from "lucide-react";
 
 export default function EarlyBuildSection() {
   const xUrl = process.env.NEXT_PUBLIC_X_URL || "https://x.com/BornAI__";
+  const openseaUrl =
+    process.env.NEXT_PUBLIC_OPENSEA_URL ||
+    "https://opensea.io/collection/aiborn-genesis/overview";
 
   return (
     <section className="py-24 sm:py-36 border-t border-white/5 relative overflow-hidden">
@@ -40,6 +44,17 @@ export default function EarlyBuildSection() {
         {/* CTAs */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <a
+            href={openseaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-mono-code text-sm font-semibold tracking-wider text-white bg-[#2081e2]/20 hover:bg-[#2081e2]/30 border border-[#2081e2]/40 hover:border-[#2081e2]/80 shadow-[0_0_35px_rgba(32,129,226,0.3)] transition-all duration-300 transform hover:-translate-y-0.5 group"
+          >
+            <OpenSeaIcon className="w-4 h-4 text-[#2081E2]" />
+            <span>OPENSEA COLLECTION (UPCOMING)</span>
+            <ArrowUpRight className="w-4 h-4 text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
+
+          <a
             href={xUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -54,7 +69,7 @@ export default function EarlyBuildSection() {
             className="inline-flex items-center gap-2.5 px-8 py-4 rounded-xl font-mono-code text-sm text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-purple-500/40 transition-all duration-300"
           >
             <BookOpen className="w-4 h-4 text-purple-400" />
-            <span>READ THE GENESIS DOCS</span>
+            <span>GENESIS DOCS</span>
             <ArrowRight className="w-4 h-4 text-zinc-400" />
           </Link>
         </div>
@@ -63,3 +78,4 @@ export default function EarlyBuildSection() {
     </section>
   );
 }
+

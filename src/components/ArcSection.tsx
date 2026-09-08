@@ -21,7 +21,7 @@ export default function ArcSection() {
 
           <div className="mt-6 space-y-4 text-zinc-400 text-base sm:text-lg leading-relaxed font-light">
             <p>
-              AIBORN is being developed with Arc in mind, exploring the intersection of AI agents and onchain infrastructure.
+              AIBORN is being developed with Arc/Robinhood in mind, exploring the intersection of AI agents and onchain infrastructure.
             </p>
             <p>
               As agents become increasingly capable of interacting with applications and programmable financial primitives, AIBORN aims to explore what an onchain identity layer for those agents could look like.
@@ -58,7 +58,7 @@ export default function ArcSection() {
           <div className="mt-8 p-3.5 rounded-lg bg-white/[0.02] border border-white/5 font-mono-code text-[11px] text-zinc-400 flex items-center gap-2">
             <ShieldAlert className="w-4 h-4 text-zinc-400 shrink-0" />
             <span>
-              DISCLAIMER: AIBORN is an independent research and product initiative developed with Arc architecture in mind; does not imply official partnership or endorsement.
+              DISCLAIMER: AIBORN is an independent research and product initiative developed with Arc/Robinhood architecture in mind; does not imply official partnership or endorsement.
             </span>
           </div>
 

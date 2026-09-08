@@ -174,7 +174,7 @@ export default function CountdownTimer({
       {/* HUD Footer note */}
       <div className="mt-3.5 flex items-center justify-between text-[11px] font-mono-code text-zinc-400 pt-2 border-t border-white/5">
         <span>TARGET: 14:15 UTC</span>
-        <span>NETWORK: ARC</span>
+        <span>NETWORK: ARC/ROBINHOOD</span>
       </div>
     </div>
   );

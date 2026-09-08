@@ -4,13 +4,17 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import StatusBadge from "./StatusBadge";
 import CountdownTimer from "./CountdownTimer";
-import { ArrowRight, Terminal, Sparkles, ChevronRight, ShieldCheck } from "lucide-react";
+import OpenSeaIcon from "./OpenSeaIcon";
+import { ArrowRight, ArrowUpRight, Terminal, Sparkles, ChevronRight, ShieldCheck } from "lucide-react";
 import { useWhitelistModal } from "./WhitelistContext";
 
 export default function HeroSection() {
   const [terminalStep, setTerminalStep] = useState(0);
   const { openWhitelistModal } = useWhitelistModal();
   const xUrl = process.env.NEXT_PUBLIC_X_URL || "https://x.com/BornAI__";
+  const openseaUrl =
+    process.env.NEXT_PUBLIC_OPENSEA_URL ||
+    "https://opensea.io/collection/aiborn-genesis/overview";
 
   // Typewriter step progression for AI identity generation
   useEffect(() => {
@@ -39,15 +43,26 @@ export default function HeroSection() {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             
             {/* Early Beta System Banner */}
-            <div className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/10 mb-6 backdrop-blur-md">
+            <div className="inline-flex flex-wrap items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/10 mb-6 backdrop-blur-md">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-ping" />
               <span className="text-xs font-mono-code text-zinc-300 tracking-wider">
                 AIBORN / EXPERIMENTAL BUILD
               </span>
               <span className="text-zinc-600">|</span>
               <span className="text-[11px] font-mono-code text-purple-400">
-                ARC ECOSYSTEM
+                ARC/ROBINHOOD ECOSYSTEM
               </span>
+              <span className="text-zinc-600">|</span>
+              <a
+                href={openseaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[11px] font-mono-code text-[#6cb2eb] hover:text-white flex items-center gap-1 transition-colors group"
+              >
+                <OpenSeaIcon className="w-3 h-3 text-[#2081E2]" />
+                <span>OPENSEA DROP</span>
+                <ArrowUpRight className="w-3 h-3 text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
             </div>
 
             {/* Main Headline */}
@@ -59,7 +74,7 @@ export default function HeroSection() {
 
             {/* Tagline */}
             <p className="mt-6 text-lg sm:text-xl font-display font-medium text-purple-200/90 tracking-wide">
-              Born in Python. Shaped by AI. Built on Arc.
+              Born in Python. Shaped by AI. Built on Arc/Robinhood.
             </p>
 
             {/* Supporting Copy */}
@@ -80,7 +95,7 @@ export default function HeroSection() {
             </div>
 
             {/* CTAs */}
-            <div className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+            <div className="mt-8 flex flex-wrap items-center gap-3 sm:gap-4 w-full sm:w-auto">
               <button
                 type="button"
                 onClick={openWhitelistModal}
@@ -89,6 +104,20 @@ export default function HeroSection() {
                 <Sparkles className="w-4 h-4 text-purple-200" />
                 <span>APPLY FOR WHITELIST</span>
               </button>
+
+              <a
+                href={openseaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-mono-code text-sm font-semibold tracking-wider text-white bg-[#2081e2]/15 hover:bg-[#2081e2]/25 border border-[#2081e2]/40 hover:border-[#2081e2]/80 shadow-[0_0_25px_rgba(32,129,226,0.25)] transition-all duration-300 transform hover:-translate-y-0.5 group"
+              >
+                <OpenSeaIcon className="w-4 h-4 text-[#2081E2]" />
+                <span>VIEW ON OPENSEA</span>
+                <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#2081e2]/30 text-[#bfdbfe] uppercase font-bold tracking-wider">
+                  UPCOMING
+                </span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
 
               <Link
                 href="#genesis"
@@ -102,9 +131,9 @@ export default function HeroSection() {
                 href={xUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-mono-code text-sm text-zinc-400 hover:text-white bg-transparent hover:bg-white/[0.04] border border-transparent hover:border-white/10 transition-all duration-300"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-3.5 rounded-xl font-mono-code text-sm text-zinc-400 hover:text-white bg-transparent hover:bg-white/[0.04] border border-transparent hover:border-white/10 transition-all duration-300"
               >
-                <span>FOLLOW @BornAI__</span>
+                <span>@BornAI__</span>
                 <ArrowRight className="w-4 h-4 text-zinc-500 group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
@@ -124,12 +153,14 @@ export default function HeroSection() {
                   </div>
                 </div>
                 <div>
-                  <div className="text-zinc-500 text-[10px] uppercase">GENESIS</div>
-                  <div className="text-purple-300 font-medium mt-0.5">IN DEVELOPMENT</div>
+                  <div className="text-zinc-500 text-[10px] uppercase">GENESIS DROP</div>
+                  <div className="text-[#6cb2eb] font-medium mt-0.5 flex items-center gap-1">
+                    <span>OPENSEA</span>
+                  </div>
                 </div>
                 <div>
                   <div className="text-zinc-500 text-[10px] uppercase">NETWORK</div>
-                  <div className="text-cyan-400 font-medium mt-0.5">ARC</div>
+                  <div className="text-cyan-400 font-medium mt-0.5">ARC/ROBINHOOD</div>
                 </div>
               </div>
             </div>

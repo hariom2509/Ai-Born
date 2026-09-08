@@ -1,10 +1,14 @@
 import React from "react";
 import Link from "next/link";
 import StatusBadge from "./StatusBadge";
+import OpenSeaIcon from "./OpenSeaIcon";
 import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const xUrl = process.env.NEXT_PUBLIC_X_URL || "https://x.com/BornAI__";
+  const openseaUrl =
+    process.env.NEXT_PUBLIC_OPENSEA_URL ||
+    "https://opensea.io/collection/aiborn-genesis/overview";
 
   return (
     <footer className="border-t border-white/8 py-16 sm:py-20 bg-[#030306] relative">
@@ -26,7 +30,7 @@ export default function Footer() {
             <div className="font-mono-code text-xs text-zinc-400 leading-relaxed space-y-1">
               <div>Python-born.</div>
               <div>AI-shaped.</div>
-              <div>Arc-native.</div>
+              <div>Arc/Robinhood-native.</div>
             </div>
 
             <div className="pt-2">
@@ -36,7 +40,19 @@ export default function Footer() {
 
           {/* Right: Minimal Navigation */}
           <div className="md:col-span-6 flex flex-col md:items-end justify-between h-full space-y-6">
-            <div className="flex flex-wrap items-center gap-6 sm:gap-8 font-mono-code text-xs">
+            <div className="flex flex-wrap items-center gap-5 sm:gap-6 font-mono-code text-xs">
+              <a
+                href={openseaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#6cb2eb] hover:text-white flex items-center gap-1.5 transition-colors group"
+                title="View Upcoming Genesis Collection on OpenSea"
+              >
+                <OpenSeaIcon className="w-3.5 h-3.5 text-[#2081E2]" />
+                <span>OpenSea (Upcoming)</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </a>
+
               <a
                 href={xUrl}
                 target="_blank"
@@ -73,3 +89,4 @@ export default function Footer() {
     </footer>
   );
 }
+

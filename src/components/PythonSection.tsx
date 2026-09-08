@@ -63,7 +63,7 @@ export default function PythonSection() {
                 <code>
                   <span className="text-purple-400">from</span> <span className="text-cyan-300">aiborn_engine</span> <span className="text-purple-400">import</span> IdentityGenerator, RarityMatrix{"\n\n"}
                   <span className="text-zinc-500"># Instantiate programmatic generator engine</span>{"\n"}
-                  generator = IdentityGenerator(seed=<span className="text-amber-300">&quot;ARC_GENESIS_5000&quot;</span>){"\n\n"}
+                  generator = IdentityGenerator(seed=<span className="text-amber-300">&quot;ARC_ROBINHOOD_GENESIS_5000&quot;</span>){"\n\n"}
                   <span className="text-zinc-500"># Synthesize agent profile with neural traits</span>{"\n"}
                   agent = generator.create_identity(id=<span className="text-amber-300">421</span>){"\n\n"}
                   <span className="text-purple-400">print</span>(agent.origin)       <span className="text-zinc-500"># &rarr; &quot;01_ORIGIN&quot;</span>{"\n"}

@@ -48,8 +48,8 @@ export default function RoadmapSection() {
       title: "ONCHAIN AGENTS",
       status: "PLANNED",
       statusVariant: "future" as const,
-      desc: "Explore controlled interactions between AI agents and onchain Arc infrastructure with strict permission boundaries.",
-      highlights: ["Arc primitives", "Permission limits", "Agent transactions"],
+      desc: "Explore controlled interactions between AI agents and onchain Arc/Robinhood infrastructure with strict permission boundaries.",
+      highlights: ["Arc/Robinhood primitives", "Permission limits", "Agent transactions"],
     },
   ];
 

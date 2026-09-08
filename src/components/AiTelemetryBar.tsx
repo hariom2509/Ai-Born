@@ -49,7 +49,7 @@ export default function AiTelemetryBar() {
           </div>
           <div>
             <span className="text-zinc-400">TARGET_NET: </span>
-            <span className="text-purple-300">ARC_ECOSYSTEM</span>
+            <span className="text-purple-300">ARC_ROBINHOOD_ECOSYSTEM</span>
           </div>
         </div>
 

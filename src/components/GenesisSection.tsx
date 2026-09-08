@@ -3,9 +3,14 @@
 import React from "react";
 import CountdownTimer from "./CountdownTimer";
 import StatusBadge from "./StatusBadge";
-import { Cpu, Lock, Layers } from "lucide-react";
+import OpenSeaIcon from "./OpenSeaIcon";
+import { Cpu, Lock, Layers, ArrowUpRight } from "lucide-react";
 
 export default function GenesisSection() {
+  const openseaUrl =
+    process.env.NEXT_PUBLIC_OPENSEA_URL ||
+    "https://opensea.io/collection/aiborn-genesis/overview";
+
   return (
     <section id="genesis" className="py-24 sm:py-32 border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,8 +38,38 @@ export default function GenesisSection() {
               </p>
             </div>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <CountdownTimer variant="compact" />
+            <div className="mt-8 flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <CountdownTimer variant="compact" />
+              </div>
+
+              {/* OpenSea Upcoming Collection CTA Card */}
+              <div className="pt-2">
+                <a
+                  href={openseaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 px-5 py-3 rounded-xl bg-[#2081e2]/10 hover:bg-[#2081e2]/20 border border-[#2081e2]/30 hover:border-[#2081e2]/60 shadow-[0_0_25px_rgba(32,129,226,0.15)] transition-all duration-300 group"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-[#2081e2]/20 flex items-center justify-center text-[#2081E2] shrink-0">
+                    <OpenSeaIcon className="w-5 h-5" />
+                  </div>
+                  <div className="text-left">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-mono-code font-bold text-white tracking-wider">
+                        OPENSEA COLLECTION
+                      </span>
+                      <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#2081e2]/30 text-[#93c5fd] font-mono-code font-semibold uppercase tracking-wider">
+                        Upcoming
+                      </span>
+                    </div>
+                    <div className="text-[11px] font-mono-code text-zinc-400 group-hover:text-blue-200 transition-colors">
+                      opensea.io/collection/aiborn-genesis
+                    </div>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 text-[#6cb2eb] ml-2 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </a>
+              </div>
             </div>
           </div>
 

@@ -1,17 +1,21 @@
 import React from "react";
 import Link from "next/link";
 import StatusBadge from "@/components/StatusBadge";
+import OpenSeaIcon from "@/components/OpenSeaIcon";
 import { ArrowLeft, BookOpen, ArrowUpRight } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "AIBORN Genesis Documentation / AI Agents With an Onchain Identity",
   description:
-    "Official Genesis technical document: 5,000 Genesis AI Agents, programmable trait taxonomy, Python engine, and Arc ecosystem roadmap.",
+    "Official Genesis technical document: 5,000 Genesis AI Agents, programmable trait taxonomy, Python engine, and Arc/Robinhood ecosystem roadmap.",
 };
 
 export default function DocsPage() {
   const xUrl = process.env.NEXT_PUBLIC_X_URL || "https://x.com/BornAI__";
+  const openseaUrl =
+    process.env.NEXT_PUBLIC_OPENSEA_URL ||
+    "https://opensea.io/collection/aiborn-genesis/overview";
 
   return (
     <div className="min-h-screen pt-28 pb-32">
@@ -30,6 +34,16 @@ export default function DocsPage() {
           <div className="flex items-center gap-3">
             <StatusBadge label="EXPERIMENTAL / BETA" variant="beta" />
             <a
+              href={openseaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#6cb2eb] hover:text-white flex items-center gap-1 transition-colors group"
+            >
+              <OpenSeaIcon className="w-3.5 h-3.5 text-[#2081E2]" />
+              <span>OpenSea (Upcoming)</span>
+              <ArrowUpRight className="w-3 h-3 text-blue-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+            <a
               href={xUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -40,6 +54,7 @@ export default function DocsPage() {
             </a>
           </div>
         </div>
+
 
         {/* Document Header */}
         <header className="mb-14">
@@ -53,7 +68,7 @@ export default function DocsPage() {
             Genesis / AI Agents With an Onchain Identity
           </h2>
           <p className="mt-4 text-base sm:text-lg text-zinc-300 font-sans">
-            Born in Python. Shaped by AI. Built for an agentic future on Arc.
+            Born in Python. Shaped by AI. Built for an agentic future on Arc/Robinhood.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4 font-mono-code text-xs">
@@ -498,10 +513,10 @@ AI AGENT
           {/* 15 */}
           <section className="space-y-4">
             <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight border-b border-white/5 pb-2">
-              15 / Why Arc?
+              15 / Why Arc/Robinhood?
             </h2>
-            <p>AIBORN is being developed with Arc in mind.</p>
-            <p>Arc provides an environment for exploring stablecoin based applications and agentic economic activity.</p>
+            <p>AIBORN is being developed with Arc/Robinhood in mind.</p>
+            <p>Arc/Robinhood provides an environment for exploring stablecoin based applications and agentic economic activity.</p>
             <blockquote className="p-4 rounded-xl bg-cyan-950/20 border-l-4 border-cyan-500 text-cyan-200">
               What happens when an AI agent has both an identity and access to programmable onchain infrastructure?
             </blockquote>
@@ -509,7 +524,7 @@ AI AGENT
               The immediate goal is not to create autonomous financial agents. The goal is to explore the infrastructure and user experience required for agents to eventually interact with onchain applications in a controlled manner.
             </p>
             <p className="text-xs font-mono-code text-zinc-400">
-              AIBORN is not claiming an official partnership or endorsement from Arc unless separately confirmed.
+              AIBORN is not claiming an official partnership or endorsement from Arc/Robinhood unless separately confirmed.
             </p>
           </section>
 
@@ -669,7 +684,7 @@ AI AGENT
 
             <div className="mt-8 p-6 rounded-2xl bg-black/80 border border-purple-500/30 text-center font-mono-code space-y-2">
               <div className="text-lg font-bold text-white font-display">AIBORN</div>
-              <div className="text-xs text-purple-300">Python born. AI shaped. Arc native.</div>
+              <div className="text-xs text-purple-300">Python born. AI shaped. Arc/Robinhood native.</div>
               <div className="text-xs text-zinc-400 pt-2">5,000 Genesis Agents. The first identities are about to be born.</div>
               <div className="text-[11px] text-emerald-400 font-semibold pt-1">Status: Experimental / Beta</div>
             </div>
@@ -678,7 +693,7 @@ AI AGENT
         </article>
 
         {/* Bottom Navigation */}
-        <div className="pt-10 border-t border-white/10 flex justify-between items-center">
+        <div className="pt-10 border-t border-white/10 flex flex-wrap justify-between items-center gap-4">
           <Link
             href="/"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-xs font-mono-code text-white transition-colors"
@@ -687,15 +702,28 @@ AI AGENT
             <span>BACK TO LANDING PAGE</span>
           </Link>
 
-          <a
-            href={xUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs font-mono-code text-white transition-colors"
-          >
-            <span>FOLLOW @BornAI__</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href={openseaUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#2081e2]/20 hover:bg-[#2081e2]/30 border border-[#2081e2]/40 hover:border-[#2081e2]/70 text-xs font-mono-code text-white transition-colors group"
+            >
+              <OpenSeaIcon className="w-3.5 h-3.5 text-[#2081E2]" />
+              <span>OPENSEA COLLECTION</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+
+            <a
+              href={xUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-xs font-mono-code text-white transition-colors"
+            >
+              <span>FOLLOW @BornAI__</span>
+              <ArrowUpRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
         </div>
 
       </div>

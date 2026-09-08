@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import StatusBadge from "./StatusBadge";
+import OpenSeaIcon from "./OpenSeaIcon";
 import { ArrowUpRight, Menu, X, Cpu, Activity, Sparkles } from "lucide-react";
 import { useWhitelistModal } from "./WhitelistContext";
 
@@ -13,6 +14,9 @@ export default function Navbar() {
   const { openWhitelistModal } = useWhitelistModal();
 
   const xUrl = process.env.NEXT_PUBLIC_X_URL || "https://x.com/BornAI__";
+  const openseaUrl =
+    process.env.NEXT_PUBLIC_OPENSEA_URL ||
+    "https://opensea.io/collection/aiborn-genesis/overview";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +69,7 @@ export default function Navbar() {
             </div>
             <div>
               <span className="text-zinc-400">NETWORK: </span>
-              <span className="text-purple-300">ARC_ECOSYSTEM</span>
+              <span className="text-purple-300">ARC_ROBINHOOD_ECOSYSTEM</span>
             </div>
           </div>
 
@@ -120,7 +124,7 @@ export default function Navbar() {
             </nav>
 
             {/* Right side CTAs */}
-            <div className="hidden sm:flex items-center gap-3">
+            <div className="hidden sm:flex items-center gap-2.5 lg:gap-3">
               <button
                 type="button"
                 onClick={openWhitelistModal}
@@ -130,10 +134,20 @@ export default function Navbar() {
                 <span>APPLY FOR WHITELIST</span>
               </button>
 
-              <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/[0.03] border border-white/10 text-[10px] font-mono-code text-cyan-300">
-                <Activity className="w-3 h-3 text-cyan-400 animate-pulse" />
-                <span>NEURAL SYNC: 99.8%</span>
-              </div>
+              <a
+                href={openseaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono-code bg-[#2081e2]/10 hover:bg-[#2081e2]/20 text-[#6cb2eb] hover:text-white border border-[#2081e2]/30 hover:border-[#2081e2]/60 transition-all duration-200"
+                title="Upcoming Genesis Collection on OpenSea"
+              >
+                <OpenSeaIcon className="w-3.5 h-3.5 text-[#2081E2]" />
+                <span className="font-medium">OpenSea</span>
+                <span className="hidden xl:inline text-[9px] px-1 py-0.2 rounded bg-[#2081e2]/25 text-[#93c5fd] uppercase tracking-wider font-semibold">
+                  Upcoming
+                </span>
+                <ArrowUpRight className="w-3 h-3 text-blue-300" />
+              </a>
 
               <a
                 href={xUrl}
@@ -141,7 +155,7 @@ export default function Navbar() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono-code bg-white/5 hover:bg-white/10 text-zinc-200 hover:text-white border border-white/10 hover:border-purple-500/40 transition-all duration-200"
               >
-                <span>Follow on X</span>
+                <span>X</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
               </a>
             </div>
@@ -197,7 +211,21 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col gap-2.5">
+              <a
+                href={openseaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex items-center justify-between w-full px-4 py-2.5 rounded-lg text-xs font-mono-code bg-[#2081e2]/10 text-[#6cb2eb] border border-[#2081e2]/30 hover:bg-[#2081e2]/20 transition-colors"
+              >
+                <div className="flex items-center gap-2">
+                  <OpenSeaIcon className="w-4 h-4 text-[#2081E2]" />
+                  <span>OpenSea (Upcoming Collection)</span>
+                </div>
+                <ArrowUpRight className="w-4 h-4" />
+              </a>
+
               <a
                 href={xUrl}
                 target="_blank"
@@ -215,3 +243,4 @@ export default function Navbar() {
     </header>
   );
 }
+

@@ -43,7 +43,7 @@ export default function AgentSection() {
       title: "Onchain Capabilities",
       status: "FUTURE",
       statusVariant: "future" as const,
-      desc: "Controlled interactions with programmable Arc financial primitives and smart contracts via strict permission boundaries.",
+      desc: "Controlled interactions with programmable Arc/Robinhood financial primitives and smart contracts via strict permission boundaries.",
       icon: Coins,
     },
   ];
