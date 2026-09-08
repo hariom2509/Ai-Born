@@ -41,6 +41,21 @@ export default function Navbar() {
     { name: "Docs", href: "/docs" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/#") || href.startsWith("#")) {
+      const targetId = href.replace("/#", "").replace("#", "");
+      if (typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "")) {
+        const elem = document.getElementById(targetId);
+        if (elem) {
+          e.preventDefault();
+          elem.scrollIntoView({ behavior: "smooth" });
+          window.history.pushState(null, "", `#${targetId}`);
+          setMobileMenuOpen(false);
+        }
+      }
+    }
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       
@@ -115,6 +130,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="text-[13px] font-mono-code tracking-wider text-zinc-400 hover:text-white transition-colors duration-200 relative group py-1"
                 >
                   {link.name}
@@ -205,7 +221,10 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, link.href);
+                  setMobileMenuOpen(false);
+                }}
                 className="text-sm font-mono-code text-zinc-300 hover:text-purple-300 tracking-wider py-1.5 border-b border-white/5"
               >
                 {link.name}

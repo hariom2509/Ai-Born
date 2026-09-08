@@ -12,7 +12,7 @@ export default function GenesisSection() {
     "https://opensea.io/collection/aiborn-genesis/overview";
 
   return (
-    <section id="genesis" className="py-24 sm:py-32 border-t border-white/5 relative">
+    <section id="genesis" className="scroll-mt-28 py-24 sm:py-32 border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

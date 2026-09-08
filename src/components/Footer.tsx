@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import StatusBadge from "./StatusBadge";
@@ -9,6 +11,17 @@ export default function Footer() {
   const openseaUrl =
     process.env.NEXT_PUBLIC_OPENSEA_URL ||
     "https://opensea.io/collection/aiborn-genesis/overview";
+
+  const handleScrollToGenesis = (e: React.MouseEvent) => {
+    if (typeof window !== "undefined" && (window.location.pathname === "/" || window.location.pathname === "")) {
+      const elem = document.getElementById("genesis");
+      if (elem) {
+        e.preventDefault();
+        elem.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", "#genesis");
+      }
+    }
+  };
 
   return (
     <footer className="border-t border-white/8 py-16 sm:py-20 bg-[#030306] relative">
@@ -65,6 +78,7 @@ export default function Footer() {
 
               <Link
                 href="/#genesis"
+                onClick={handleScrollToGenesis}
                 className="text-zinc-400 hover:text-white transition-colors"
               >
                 GENESIS

@@ -16,6 +16,15 @@ export default function HeroSection() {
     process.env.NEXT_PUBLIC_OPENSEA_URL ||
     "https://opensea.io/collection/aiborn-genesis/overview";
 
+  const handleScrollToGenesis = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const elem = document.getElementById("genesis");
+    if (elem) {
+      elem.scrollIntoView({ behavior: "smooth" });
+      window.history.pushState(null, "", "#genesis");
+    }
+  };
+
   // Typewriter step progression for AI identity generation
   useEffect(() => {
     const timer = setInterval(() => {
@@ -119,13 +128,14 @@ export default function HeroSection() {
                 <ArrowUpRight className="w-3.5 h-3.5 text-blue-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
 
-              <Link
+              <a
                 href="#genesis"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-mono-code text-sm font-semibold tracking-wider text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-purple-500/40 transition-all duration-300"
+                onClick={handleScrollToGenesis}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl font-mono-code text-sm font-semibold tracking-wider text-zinc-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-purple-500/40 transition-all duration-300 cursor-pointer"
               >
                 <span>EXPLORE GENESIS</span>
                 <ChevronRight className="w-4 h-4 text-zinc-400" />
-              </Link>
+              </a>
 
               <a
                 href={xUrl}

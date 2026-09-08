@@ -54,7 +54,7 @@ export default function RoadmapSection() {
   ];
 
   return (
-    <section id="roadmap" className="py-24 sm:py-32 border-t border-white/5 relative">
+    <section id="roadmap" className="scroll-mt-28 py-24 sm:py-32 border-t border-white/5 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
